@@ -1,10 +1,4 @@
-/**
-* Template Name: Regna
-* Updated: Jan 09 2024 with Bootstrap v5.3.2
-* Template URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 /*--------------------------------------------------------------
 # General
@@ -119,6 +113,10 @@ h6 {
 
 #header.header-transparent {
   background: transparent;
+}
+
+#header.header-koleksi {
+  background: rgba(52, 59, 64, 0.9);
 }
 
 #header.header-scrolled {
@@ -558,50 +556,50 @@ section {
   }
 }
 
-/* About Us Section
+/* koleksi Us Section
 --------------------------------*/
-#about {
+#koleksi {
   background: #fff;
   padding: 80px 0;
 }
 
-#about .about-container .background {
+#koleksi .koleksi-container .background {
   min-height: 300px;
   background: url(../img/about-img.jpg) center top no-repeat;
   margin-bottom: 10px;
 }
 
-#about .about-container .content {
+#koleksi .koleksi-container .content {
   background: #fff;
 }
 
-#about .about-container .title {
+#koleksi .koleksi-container .title {
   color: #333;
   font-weight: 700;
   font-size: 32px;
 }
 
 @media (max-width: 768px) {
-  #about .about-container .title {
+  #koleksi .koleksi-container .title {
     padding-top: 15px;
   }
 }
 
-#about .about-container p {
+#koleksi .koleksi-container p {
   line-height: 26px;
 }
 
-#about .about-container p:last-child {
+#koleksi .koleksi-container p:last-child {
   margin-bottom: 0;
 }
 
-#about .about-container .icon-box {
+#koleksi .koleksi-container .icon-box {
   background: #fff;
   background-size: cover;
   padding: 0 0 30px 0;
 }
 
-#about .about-container .icon-box .icon {
+#koleksi .koleksi-container .icon-box .icon {
   float: left;
   background: #fff;
   width: 64px;
@@ -615,13 +613,13 @@ section {
   border: 2px solid #2dc997;
 }
 
-#about .about-container .icon-box .icon i {
+#koleksi .koleksi-container .icon-box .icon i {
   color: #2dc997;
   font-size: 24px;
   line-height: 0;
 }
 
-#about .about-container .icon-box .title {
+#koleksi .koleksi-container .icon-box .title {
   margin-left: 80px;
   font-weight: 500;
   margin-bottom: 5px;
@@ -629,11 +627,11 @@ section {
   text-transform: uppercase;
 }
 
-#about .about-container .icon-box .title a {
+#koleksi .koleksi-container .icon-box .title a {
   color: #111;
 }
 
-#about .about-container .icon-box .description {
+#koleksi .koleksi-container .icon-box .description {
   margin-left: 80px;
   line-height: 24px;
   font-size: 14px;
@@ -1169,4 +1167,143 @@ section {
     border: none;
     outline: none;
     box-shadow: none;
+}
+
+.product-grid{
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+.product-grid .product-image{
+  overflow: hidden;
+  position: relative;
+}
+.product-grid .product-image a.image{ display: block; }
+.product-grid .product-image img{
+  width: 100%;
+  height: auto;
+}
+.product-grid .product-image .pic-1{ transition: all 0.3s ease 0s; }
+.product-grid .product-image:hover .pic-1{ transform: translateX(100%); }
+.product-grid .product-image .pic-2{
+  width: 100%;
+  height: 100%;
+  transform: translateX(-101%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease 0s;
+}
+.product-grid .product-image:hover .pic-2{ transform: translateX(0); }
+.product-grid .product-sale-label{
+  color: #fff;
+  background: #0a805e;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 2px 8px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.product-grid .product-like-icon{
+  color: #696969;
+  font-size: 22px;
+  line-height: 20px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.product-grid .product-like-icon:hover{ color: #0a805e; }
+.product-grid .product-like-icon:before,
+.product-grid .product-like-icon:after{
+  content: attr(data-tip);
+  color: #fff;
+  background-color: #000;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 7px 7px 5px;
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  top: 15px;
+  transition: all 0.3s ease 0s;
+}
+.product-grid .product-like-icon:after{
+  content: '';
+  height: 15px;
+  width: 15px;
+  padding: 0;
+  transform: translateX(-50%) rotate(45deg);
+  right: auto;
+  left: 50%;
+  top: 15px;
+  z-index: -1;
+}
+.product-grid .product-like-icon:hover:before,
+.product-grid .product-like-icon:hover:after{
+  visibility: visible;
+  top: 30px;
+}
+.product-grid .product-links{
+  width: 170px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  opacity: 0;
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transition: all 0.3s ease 0s;
+}
+.product-grid:hover .product-links{
+  bottom: 40px;
+  opacity: 1;
+}
+.product-grid .product-links li{
+  display: inline-block;
+  margin: 0 2px;
+}
+.product-grid .product-links li a{
+  color: #fff;
+  background: #000;
+  font-size: 16px;
+  line-height: 48px;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+.product-grid:hover .product-links li a:hover{ background: #333; }
+.product-grid .product-content{
+  text-align: left;
+  padding: 15px 0 0;
+}
+.product-grid .title{
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin: 0 0 8px;
+}
+.product-grid .title a{
+  color: #333;
+  transition: all 0.3s ease 0s;
+}
+.product-grid .title a:hover{ color: #0a805e; }
+.product-grid .price{
+  color: #0a805e;
+  font-size: 16px;
+  font-weight: 500;
+}
+.product-grid .price span{
+  color: #555;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: line-through;
+  margin: 0 5px 0 0;
+}
+@media screen and (max-width: 990px){
+  .product-grid{ margin: 0 0 30px; }
 }
