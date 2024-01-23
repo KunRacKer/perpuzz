@@ -1169,7 +1169,6 @@ section {
     box-shadow: none;
 }
 
-<<<<<<< HEAD
 .product-grid{
   background-color: #fff;
   font-family: 'Montserrat', sans-serif;
@@ -1308,5 +1307,3 @@ section {
 @media screen and (max-width: 990px){
   .product-grid{ margin: 0 0 30px; }
 }
-=======
->>>>>>> 444ee66df4cc4de2311989248520f78467958802
