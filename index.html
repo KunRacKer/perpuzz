@@ -3,6 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,600,700" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
 
     <title>Perpuzz</title>
     <meta content="" name="description" />
@@ -89,7 +95,7 @@
           crossorigin="anonymous"
         />
         <div class="container">
-          <br />
+          <br/>
           <div class="row justify-content-center">
             <h2><center>Search Book </center></h2>
           </div>
@@ -113,21 +119,51 @@
                   </div>
                   <!--end of col-->
                   <div class="col-auto">
-                    <button class="btn btn-lg btn-success" type="submit">
-                      Search
-                    </button>
+                    <a href="#">
+                      <button class="btn btn-lg btn-success" type="submit">
+                        Search
+                      </button>
+                    </a>
                   </div>
                   <!--end of col-->
                 </div>
+
               </form>
+              <div class="container">
+                <br>
+                <h5><center>Advanced Search</center></h5>
+                <form class="row g-3">
+                  <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Judul</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">ISSN/ISBN</label>
+                    <input type="password" class="form-control" id="inputPassword4">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Pengarang</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Penerbit</label>
+                    <input type="password" class="form-control" id="inputPassword4">
+                  </div>
+                  <br>
+                </form>
+              </div>
             </div>
             <!--end of col-->
           </div>
         </div>
       </section>
       <!-- End About Section -->
+      
     </main>
     <!-- End #main -->
+
+
+    
 
 
     <a
@@ -144,6 +180,40 @@
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <script src="js/extention/choices.js"></script>
+    <script>
+      const customSelects = document.querySelectorAll("select");
+      const deleteBtn = document.getElementById('delete')
+      const choices = new Choices('select',
+      {
+        searchEnabled: false,
+        itemSelectText: '',
+        removeItemButton: true,
+      });
+      deleteBtn.addEventListener("click", function(e)
+      {
+        e.preventDefault()
+        const deleteAll = document.querySelectorAll('.choices__button')
+        for (let i = 0; i < deleteAll.length; i++)
+        {
+          deleteAll[i].click();
+        }
+      });
+
+    </script>
+
+    <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+      
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+      </script>
+      
+
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
