@@ -1,3 +1,17 @@
+<?php
+  session_start(); // Start a session
+
+  if (!isset($_SESSION['Email'])) {
+      header("Location: view/login.php");
+      exit(); // Stop further execution of the page
+  }
+  // if (!empty($_SESSION['ID_anggota'])) {
+  //     header("Location: ");
+  // }
+  // elseif (!empty($_SESSION['ID_petugas'])) {
+  //     header("Location: ");
+  // }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
