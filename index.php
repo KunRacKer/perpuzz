@@ -75,7 +75,7 @@
 
         <nav id="navbar" class="navbar">
           <ul>
-            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+            <li><a class="nav-link scrollto active" href="index.php">Home</a></li>
             <li><a class="nav-link scrollto" href="view/koleksi.php">Collection</a></li>
             <li><a class="nav-link scrollto" href="#about">Catalog</a></li>
             <li><a class="nav-link scrollto" href="#services">Favorite</a></li>

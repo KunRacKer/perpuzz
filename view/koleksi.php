@@ -56,7 +56,7 @@
       
         <nav id="navbar" class="navbar">
           <ul>
-            <li><a class="nav-link" href="../index.html">Home</a></li>
+            <li><a class="nav-link" href="../index.php">Home</a></li>
             <li><a class="nav-link active" href="koleksi.php">Collection</a></li>
             <li><a class="nav-link" href="#about">Catalog</a></li>
             <li><a class="nav-link" href="#services">Favorite</a></li>
