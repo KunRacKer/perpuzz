@@ -79,8 +79,17 @@
             <li><a class="nav-link scrollto" href="view/koleksi.php">Collection</a></li>
             <li><a class="nav-link scrollto" href="#about">Catalog</a></li>
             <li><a class="nav-link scrollto" href="#services">Favorite</a></li>
-            </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
+            <li class="nav-item dropdown">
+              <button class="btn btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class='bx bx-menu' style='color:#ffffff'></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#"><i class='bx bx-log-in'></i></a></li>
+                <li><a class="dropdown-item" href="forms/logout.php"><i class='bx bx-log-out'></i></a></li>
+              </ul>
+          </li>
+          </ul>
+          
         </nav>
         <!-- .navbar -->
       </div>
