@@ -77,7 +77,7 @@
     <!-- End Section -->
 
     <!-- content -->
-    <div class="container px-3">
+    <div class="container px-3" data-aos="zoom-in" data-aos-delay="100">
       <div class="row justify-content-md-left justify-content-sm-left">
         <div class="col-md-3 col-sm-6">
           <div class="product-grid">
@@ -87,7 +87,7 @@
                       <img class="pic-2" src="../assets/img/gmbr (2).jpg">
                   </a>
                   <a href="#" class="product-like-icon" data-tip="Add to Wishlist">
-                      <i class="far fa-heart"></i>
+                      <i class="fa fa-heart"></i>
                   </a>
                   <ul class="product-links">
                       <li><a href="#"><i class="fa fa-search"></i></a></li>
@@ -110,7 +110,7 @@
                     </a>
                     <span class="product-sale-label">Sale</span>
                     <a href="#" class="product-like-icon" data-tip="Add to Wishlist">
-                        <i class="far fa-heart"></i>
+                        <i class="fa fa-heart"></i>
                     </a>
                     <ul class="product-links">
                         <li><a href="#"><i class="fa fa-search"></i></a></li>
@@ -132,7 +132,7 @@
                         <img class="pic-2" src="../assets/img/gmbr (6).jpg">
                     </a>
                     <a href="#" class="product-like-icon" data-tip="Add to Wishlist">
-                        <i class="far fa-heart"></i>
+                        <i class="fa fa-heart"></i>
                     </a>
                     <ul class="product-links">
                         <li><a href="#"><i class="fa fa-search"></i></a></li>
@@ -154,7 +154,7 @@
                       <img class="pic-2" src="../assets/img/gmbr (1).jpeg">
                   </a>
                   <a href="#" class="product-like-icon" data-tip="Add to Wishlist">
-                      <i class="far fa-heart"></i>
+                      <i class="fa fa-heart"></i>
                   </a>
                   <ul class="product-links">
                       <li><a href="#"><i class="fa fa-search"></i></a></li>
@@ -177,7 +177,7 @@
                     </a>
                     <span class="product-sale-label">Sale</span>
                     <a href="#" class="product-like-icon" data-tip="Add to Wishlist">
-                        <i class="far fa-heart"></i>
+                        <i class="fa fa-heart"></i>
                     </a>
                     <ul class="product-links">
                         <li><a href="#"><i class="fa fa-search"></i></a></li>
@@ -199,7 +199,7 @@
                         <img class="pic-2" src="../assets/img/gmbr (5).jpeg">
                     </a>
                     <a href="#" class="product-like-icon" data-tip="Add to Wishlist">
-                        <i class="far fa-heart"></i>
+                        <i class="fa fa-heart"></i>
                     </a>
                     <ul class="product-links">
                         <li><a href="#"><i class="fa fa-search"></i></a></li>
