@@ -11,8 +11,6 @@ if ($koneksi->connect_error) {
 // Retrieve form data
 $Email = $_POST['Email'];
 $password = md5($_POST['password']); // MD5 encryption
-$idanggota = $_POST['ID_anggota'];
-$idpetugas = $_POST['ID_petugas'];
 
 // Query to check user
 $sql = "SELECT * FROM user WHERE Email = '$Email' AND `password` = '$password'";
