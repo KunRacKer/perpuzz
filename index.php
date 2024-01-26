@@ -84,8 +84,7 @@
                 <i class='bx bx-menu' style='color:#ffffff'></i>
               </button>
               <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="#"><i class='bx bx-log-in'></i></a></li>
-                <li><a class="dropdown-item" href="forms/logout.php"><i class='bx bx-log-out'></i></a></li>
+                <li><a class="dropdown-item" href="forms/logout.php">Log out<i class='bx bx-log-out'>LogOut</i></a></li>
               </ul>
           </li>
           </ul>
