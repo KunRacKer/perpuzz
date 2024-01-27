@@ -19,6 +19,13 @@
 
     <!-- Custom styles for this template-->
     <link href="../../assets/css/admin/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 
 </head>
 
@@ -31,7 +38,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="admin.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -189,62 +196,74 @@
                 <!-- End of Topbar -->
 
                 <h1 class="m-5 text-dark"> Tambah Buku</h1>
-                <section class="content">
-                    <form method="post" action="insert_menu.php" enctype="multipart/form-data">
-                        <!-- Table Start -->
-                        <section class="mx-3">
-                            <div class="col-sm-12 col-xl-6">
-                                <div class="bg-light rounded h-100 p-4">
-                                    <div class="mb-3">
-                                        <label for="formFile" class="form-label">ISBN/ISSN</label>
-                                        <input type="text" name="kd_menu" class="form-control" id="floatingI   nput">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="formFile" class="form-label">Judul</label>
-                                        <input type="text" name="nama" class="form-control" id="floatingInput">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="formFile" class="form-label">Pengarang</label>
-                                        <input type="text" name="nama" class="form-control" id="floatingInput">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="formFile" class="form-label">Tipe_Media</label>
-                                        <input type="text" name="nama" class="form-control" id="floatingInput">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="formFile" class="form-label">Penerbit</label>
-                                        <input type="text" name="nama" class="form-control" id="floatingInput">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="formFile" class="form-label">Jenis</label>
-                                        <input type="text" name="nama" class="form-control" id="floatingInput">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="formFile" class="form-label">Edisi</label>
-                                        <input type="text" name="nama" class="form-control" id="floatingInput">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="formFile" class="form-label">Tahun Terbit</label>
-                                        <input type="text" name="nama" class="form-control" id="floatingInput">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="formFile" class="form-label">Subjek</label>
-                                        <input type="text" name="nama" class="form-control" id="floatingInput">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="formFile" class="form-label">Foto Buku</label>
-                                        <input class="form-control" name="pic" type="file" id="formFile">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <button type="submit" name="btn_simpan" class="btn btn-primary m-2 col-md-2 mt-4">Simpan
-                                    Buku </button>
-                                <a href="Menu.php" class="btn btn-primary m-2 col-md-2 mt-4">Kembali</a>
-                            </div>
-                    </form>
-                </section>
+            <div class="card card-primary">
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">ISBN_ISSN</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nomor ISBN_ISSN">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Judul</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Judul">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Pengarang</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Pengarang">
+                  </div>
+                  <div class="form-group">
+                  <label for="exampleSelectRounded0">Tipe_Media</label>
+                  <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                    <option>Text Book</option>
+                    <option>E Book</option>
+                  </select>
+                </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Penerbit</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Penerbit">
+                  </div>
+                  <div class="form-group">
+                  <label for="exampleSelectRounded0">Jenis</label>
+                  <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                    <option>Buku</option>
+                    <option>Novel</option>
+                    <option>Majalah</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Edisi</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Edisi">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Tahun Terbit</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Tahun Terbit">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Subjek</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Subjek">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputFile">Upload Cover Buku</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.card-body -->
 
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Simpan</button>
+                  <button type="submit" class="btn btn-primary">Kembali</button>
+                </div>
+                
+              </form>
+            </div>
+            </div>
                 <!-- Bootstrap core JavaScript-->
                 <script src="vendor/jquery/jquery.min.js"></script>
                 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

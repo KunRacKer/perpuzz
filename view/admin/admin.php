@@ -19,6 +19,13 @@
 
     <!-- Custom styles for this template-->
     <link href="../../assets/css/admin/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 
 </head>
 
@@ -70,7 +77,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="user.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>User</span></a>
             </li>
@@ -82,7 +89,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="petugas.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Petugas</span></a>
             </li>
@@ -197,43 +204,30 @@
                             <div class="row">
                                 <div class="col-md-4 col-sm-6">
                                     <div class="card" style="width: 20rem;">
-                                        <img src="..." class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make up the
-                                                bulk of
-                                                the card's content.</p>
+                                        <img src="../../assets/img/admin/book.jpg" class="card-img-top" alt="...">
+                                        <div class="card-img-overlay">
+                                            <h3 class="card-title" style="color: #ffffff">Buku</h3>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6">
                                     <div class="card" style="width: 20rem;">
-                                        <img src="..." class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make up the
-                                                bulk of
-                                                the card's content.</p>
+                                        <img src="../../assets/img/admin/user_1.jpg" class="card-img-top" alt="...">
+                                        <div class="card-img-overlay">
+                                            <h3 class="card-title" style="color: #ffffff">User</h3>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6">
                                     <div class="card" style="width: 20rem;">
-                                        <img src="..." class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make up the
-                                                bulk of
-                                                the card's content.</p>
+                                        <img src="../../assets/img/admin/admin_1.jpg" class="card-img-top" alt="...">
+                                        <div class="card-img-overlay">
+                                            <h3 class="card-title" style="color: #ffffff">Petugas</h3>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </section>
 
                 <!-- Bootstrap core JavaScript-->
