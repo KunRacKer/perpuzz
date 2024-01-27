@@ -190,10 +190,10 @@
 
                 <div class="card">
                     <!-- /.card-header -->
-                    
+
                     <div class="card-body">
                         <table id="example1" class="table table-bordered table-striped">
-                        <a href="tambahbuku.php"><button type="button" class="btn btn-primary mx-4 mb-3 col-md-2">Tambah Data Buku</button></a>
+                            <a href="tambahbuku.php"><button type="button" class="btn btn-primary mx-4 mb-3 col-md-2">Tambah Data Buku</button></a>
                             <thead>
                                 <tr>
                                     <th>ISBN_ISSN</th>
@@ -206,23 +206,23 @@
                                     <th>Tahun_Terbit</th>
                                     <th>Subjek</th>
                                     <th colspan="2">Aksi</th>
-                                   
+
                                 </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td> 1</td>
-                                <td> 2</td>
-                                <td> 3</td>
-                                <td> 4</td>
-                                <td> 5</td>
-                                <td> 6</td>
-                                <td> 7</td>
-                                <td>8 </td>
-                                <td> 9</td>
-                                <td> <a href="">Update</a></td>
-                                <td><a href="">Hapus</a></td>
-                            </tr>
+                                <tr>
+                                    <td> 1</td>
+                                    <td> 2</td>
+                                    <td> 3</td>
+                                    <td> 4</td>
+                                    <td> 5</td>
+                                    <td> 6</td>
+                                    <td> 7</td>
+                                    <td>8 </td>
+                                    <td> 9</td>
+                                    <td> <a href="">Update</a></td>
+                                    <td><a href="">Hapus</a></td>
+                                </tr>
                             </tbody>
                             <tfoot>
                                 <tr>
@@ -236,8 +236,8 @@
                                     <th>Tahun_Terbit</th>
                                     <th>Subjek</th>
                                     <th colspan="2">Aksi</th>
-                                    
-                                    
+
+
                                 </tr>
                             </tfoot>
                         </table>

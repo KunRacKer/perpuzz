@@ -13,9 +13,7 @@
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="../../assets/css/admin/sb-admin-2.min.css" rel="stylesheet">
@@ -119,11 +117,9 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -137,18 +133,14 @@
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
                             <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
@@ -162,14 +154,12 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
                                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
@@ -196,90 +186,90 @@
                 <!-- End of Topbar -->
 
                 <h1 class="m-5 text-dark"> Tambah Buku</h1>
-            <div class="card card-primary">
-              <!-- /.card-header -->
-              <!-- form start -->
-              <form>
-                <div class="card-body">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">ISBN_ISSN</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nomor ISBN_ISSN">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Judul</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Judul">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Pengarang</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Pengarang">
-                  </div>
-                  <div class="form-group">
-                  <label for="exampleSelectRounded0">Tipe_Media</label>
-                  <select class="custom-select rounded-0" id="exampleSelectRounded0">
-                    <option>Text Book</option>
-                    <option>E Book</option>
-                  </select>
-                </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Penerbit</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Penerbit">
-                  </div>
-                  <div class="form-group">
-                  <label for="exampleSelectRounded0">Jenis</label>
-                  <select class="custom-select rounded-0" id="exampleSelectRounded0">
-                    <option>Buku</option>
-                    <option>Novel</option>
-                    <option>Majalah</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Edisi</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Edisi">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Tahun Terbit</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Tahun Terbit">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Subjek</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Subjek">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputFile">Upload Cover Buku</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- /.card-body -->
+                <div class="card card-primary">
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">ISBN_ISSN</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nomor ISBN_ISSN">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Judul</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Judul">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Pengarang</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Pengarang">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleSelectRounded0">Tipe_Media</label>
+                                <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                                    <option>Text Book</option>
+                                    <option>E Book</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Penerbit</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Penerbit">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleSelectRounded0">Jenis</label>
+                                <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                                    <option>Buku</option>
+                                    <option>Novel</option>
+                                    <option>Majalah</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Edisi</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Edisi">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Tahun Terbit</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Tahun Terbit">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Subjek</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Subjek">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputFile">Upload Cover Buku</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
 
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Simpan</button>
-                  <button type="submit" class="btn btn-primary">Kembali</button>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                            <button type="submit" class="btn btn-primary">Kembali</button>
+                        </div>
+
+                    </form>
                 </div>
-                
-              </form>
             </div>
-            </div>
-                <!-- Bootstrap core JavaScript-->
-                <script src="vendor/jquery/jquery.min.js"></script>
-                <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <!-- Bootstrap core JavaScript-->
+            <script src="vendor/jquery/jquery.min.js"></script>
+            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-                <!-- Core plugin JavaScript-->
-                <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+            <!-- Core plugin JavaScript-->
+            <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-                <!-- Custom scripts for all pages-->
-                <script src="js/sb-admin-2.min.js"></script>
+            <!-- Custom scripts for all pages-->
+            <script src="js/sb-admin-2.min.js"></script>
 
-                <!-- Page level plugins -->
-                <script src="vendor/chart.js/Chart.min.js"></script>
+            <!-- Page level plugins -->
+            <script src="vendor/chart.js/Chart.min.js"></script>
 
-                <!-- Page level custom scripts -->
-                <script src="js/demo/chart-area-demo.js"></script>
-                <script src="js/demo/chart-pie-demo.js"></script>
+            <!-- Page level custom scripts -->
+            <script src="js/demo/chart-area-demo.js"></script>
+            <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 
