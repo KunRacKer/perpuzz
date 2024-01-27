@@ -205,7 +205,7 @@
                                     <th>Edisi</th>
                                     <th>Tahun_Terbit</th>
                                     <th>Subjek</th>
-                                    <th colspan="2">Aksi</th>
+                                    <th colspan="2"><center>Aksi</center></th>
 
                                 </tr>
                             </thead>
@@ -235,7 +235,7 @@
                                     <th>Edisi</th>
                                     <th>Tahun_Terbit</th>
                                     <th>Subjek</th>
-                                    <th colspan="2">Aksi</th>
+                                    <th colspan="2"><center>Aksi</center></th>
 
 
                                 </tr>
