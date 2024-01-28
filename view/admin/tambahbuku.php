@@ -47,7 +47,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="admin.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -62,7 +62,7 @@
             </div>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="buku.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Buku</span></a>
@@ -248,7 +248,7 @@
 
                         <div class="card-footer">
                             <button type="submit" class="btn btn-primary">Simpan</button>
-                            <button type="submit" class="btn btn-primary">Kembali</button>
+                            <button type="submit" class="btn btn-default float-right"> <a href="buku.php">Kembali</a> </button>
                         </div>
 
                     </form>
