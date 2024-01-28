@@ -5,12 +5,12 @@
       header("Location: view/login.php");
       exit(); // Stop further execution of the page
   }
-  // if (!empty($_SESSION['ID_anggota'])) {
-  //     header("Location: ");
-  // }
-  // elseif (!empty($_SESSION['ID_petugas'])) {
-  //     header("Location: ");
-  // }
+  if (!empty($_SESSION['ID_anggota'])) {
+      $role = 1;
+  }
+  elseif (!empty($_SESSION['ID_petugas'])) {
+      $role = 2;
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,9 +68,7 @@
     >
       <div class="container d-flex justify-content-between align-items-center">
         <div id="logo">
-          <a href="index.html"><img src="assets/img/logo.png" alt="" /></a>
-          <!-- Uncomment below if you prefer to use a text logo -->
-          <!--<h1><a href="index.html">Regna</a></h1>-->
+          <a href="index.php"><img src="assets/img/logo.png" alt="" /></a>
         </div>
 
         <nav id="navbar" class="navbar">
@@ -81,12 +79,13 @@
             <li><a class="nav-link scrollto" href="#services">Favorite</a></li>
             <li class="nav-item dropdown">
               <button class="btn btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class='bx bx-menu' style='color:#ffffff'></i>
+                <i class='bx bx-menu' style='color:#ffffff;'></i>
               </button>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="forms/logout.php">Log out<i class='bx bx-log-out'>LogOut</i></a></li>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="forms/logout.php"><i class='bx bx-log-in'> LogIn</i></a></li>
+                <li><a class="dropdown-item" href="forms/logout.php"><i class='bx bx-log-out'> LogOut</i></a></li>
               </ul>
-          </li>
+            </li>
           </ul>
           
         </nav>
@@ -100,22 +99,16 @@
       <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
         <h1>Welcome to Perpuzz</h1>
         <h2>
-          We are team of talented designers making websites with Bootstrap
+          Bridging the Gap Between Books and Bytes
         </h2>
-        <a href="#about" class="btn-get-started">Get Started and Search</a>
+        <a href="#main" class="btn-get-started">Get Started and Search</a>
       </div>
     </section>
     <!-- End Hero Section -->
 
     <main id="main">
       <!-- ======= About Section ======= -->
-      <section id="about">
-        <link
-          rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
-          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-          crossorigin="anonymous"
-        />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"/>
         <div class="container">
           <br/>
           <div class="row justify-content-center">
@@ -177,7 +170,6 @@
             <!--end of col-->
           </div>
         </div>
-      </section>
       <!-- End About Section -->
       
     </main>

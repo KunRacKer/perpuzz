@@ -50,15 +50,15 @@
             </div>
             <div class="signup-link">Not a member? <a href="">Signup now</a></div>
           </form>
-          <form action="#" class="signup">
+          <form action="../forms/register.php" method="POST" class="signup">
             <div class="field">
-              <input type="text" placeholder="Email Address" required>
+              <input type="text" placeholder="Email Address" name="Email" required>
             </div>
             <div class="field">
-              <input type="text" placeholder="Username" required>
+              <input type="text" placeholder="Username" name="Name" required>
             </div>
             <div class="field">
-              <input type="password" placeholder="Password" required>
+              <input type="password" placeholder="Password" name="password" required>
             </div>
             <div class="field btn">
               <div class="btn-layer"></div>

@@ -49,9 +49,7 @@
     >
       <div class="container d-flex justify-content-between align-items-center">
         <div id="logo">
-          <a href="index.html"><img src="../assets/img/logo.png" alt="" /></a>
-          <!-- Uncomment below if you prefer to use a text logo -->
-          <!--<h1><a href="index.html">Regna</a></h1>-->
+          <a href="index.php"><img src="../assets/img/logo.png" alt="" /></a>
         </div>
       
         <nav id="navbar" class="navbar">
@@ -60,6 +58,15 @@
             <li><a class="nav-link active" href="koleksi.php">Collection</a></li>
             <li><a class="nav-link" href="#about">Catalog</a></li>
             <li><a class="nav-link" href="#services">Favorite</a></li>
+            <li class="nav-item dropdown">
+              <button class="btn btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class='bx bx-menu' style='color:#ffffff;'></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="forms/logout.php"><i class='bx bx-log-in'> LogIn</i></a></li>
+                <li><a class="dropdown-item" href="forms/logout.php"><i class='bx bx-log-out'> LogOut</i></a></li>
+              </ul>
+            </li>
             </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
@@ -84,7 +91,7 @@
               <div class="product-image">
                   <a href="#" class="image">
                       <img class="pic-1" src="../assets/img/gmbr (1).jpeg">
-                      <img class="pic-2" src="../assets/img/gmbr (2).jpg">
+                      <img class="pic-2" src="../assets/img/black.jpg">
                   </a>
                   <a href="#" class="product-like-icon" data-tip="Add to Wishlist">
                       <i class="fa fa-heart"></i>
@@ -106,7 +113,7 @@
                 <div class="product-image">
                     <a href="#" class="image">
                         <img class="pic-1" src="../assets/img/gmbr (3).jpg">
-                        <img class="pic-2" src="../assets/img/gmbr (4).jpg">
+                        <img class="pic-2" src="../assets/img/black.jpg">
                     </a>
                     <span class="product-sale-label">Sale</span>
                     <a href="#" class="product-like-icon" data-tip="Add to Wishlist">
@@ -129,7 +136,7 @@
                 <div class="product-image">
                     <a href="#" class="image">
                         <img class="pic-1" src="../assets/img/gmbr (5).jpeg">
-                        <img class="pic-2" src="../assets/img/gmbr (6).jpg">
+                        <img class="pic-2" src="../assets/img/black.jpg">
                     </a>
                     <a href="#" class="product-like-icon" data-tip="Add to Wishlist">
                         <i class="fa fa-heart"></i>
@@ -151,7 +158,7 @@
               <div class="product-image">
                   <a href="#" class="image">
                       <img class="pic-1" src="../assets/img/gmbr (2).jpg">
-                      <img class="pic-2" src="../assets/img/gmbr (1).jpeg">
+                      <img class="pic-2" src="../assets/img/black.jpg">
                   </a>
                   <a href="#" class="product-like-icon" data-tip="Add to Wishlist">
                       <i class="fa fa-heart"></i>
@@ -173,7 +180,7 @@
                 <div class="product-image">
                     <a href="#" class="image">
                         <img class="pic-1" src="../assets/img/gmbr (4).jpg">
-                        <img class="pic-2" src="../assets/img/gmbr (3).jpg">
+                        <img class="pic-2" src="../assets/img/black.jpg">
                     </a>
                     <span class="product-sale-label">Sale</span>
                     <a href="#" class="product-like-icon" data-tip="Add to Wishlist">
@@ -196,7 +203,7 @@
                 <div class="product-image">
                     <a href="#" class="image">
                         <img class="pic-1" src="../assets/img/gmbr (6).jpg">
-                        <img class="pic-2" src="../assets/img/gmbr (5).jpeg">
+                        <img class="pic-2" src="../assets/img/black.jpg">
                     </a>
                     <a href="#" class="product-like-icon" data-tip="Add to Wishlist">
                         <i class="fa fa-heart"></i>
