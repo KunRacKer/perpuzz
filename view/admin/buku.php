@@ -209,6 +209,9 @@
                                                 <th>Edisi</th>
                                                 <th>Tahun Terbit</th>
                                                 <th>Subjek</th>
+                                                <th>Jumlah</th>
+                                                <th>Gambar</th>
+                                                <th>Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -221,6 +224,9 @@
                                             <td>7</td>
                                             <td>8</td>
                                             <td>9</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0 </td>
                                         </tbody>
                                         <tfoot>
                                             <tr>
@@ -233,6 +239,9 @@
                                                 <th>Edisi</th>
                                                 <th>Tahun Terbit</th>
                                                 <th>Subjek</th>
+                                                <th>Jumlah</th>
+                                                <th>Gambar</th>
+                                                <th>Aksi</th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -264,8 +273,6 @@
     <script src="vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
     <!-- jQuery -->
     <script src="../../plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
