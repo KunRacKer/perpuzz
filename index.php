@@ -101,84 +101,10 @@
         <h2>
           Bridging the Gap Between Books and Bytes
         </h2>
-        <a href="#main" class="btn-get-started">Get Started and Search</a>
+        <a href="view/katalog.php" class="btn-get-started">Get Started and Search</a>
       </div>
     </section>
     <!-- End Hero Section -->
-
-    <main id="main">
-      <!-- ======= About Section ======= -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"/>
-        <div class="container">
-          <br/>
-          <div class="row justify-content-center">
-            <h2><center>Search Book</center></h2>
-          </div>
-          <br>
-          <br>
-          
-          <div class="row justify-content-center">
-            <div class="col-12 col-md-10 col-lg-8">
-              <form class="card card-sm">
-                <div class="card-body row no-gutters align-items-center">
-                  <div class="col-auto">
-                    <i class="fas fa-search h4 text-body"></i>
-                  </div>
-                  <!--end of col-->
-                  <div class="col">
-                    <input
-                      class="form-control form-control-lg form-control-borderless"
-                      type="search"
-                      placeholder="Search Books or keywords"
-                    />
-                  </div>
-                  <!--end of col-->
-                  <div class="col-auto">
-                    <a href="#">
-                      <button class="btn btn-lg btn-success" type="submit">
-                        Search
-                      </button>
-                    </a>
-                  </div>
-                  <!--end of col-->
-                </div>
-
-              </form>
-              <div class="container pb-5">
-                <br>
-                <h5><center>Advanced Search</center></h5>
-                <form class="row g-3">
-                  <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label">Judul</label>
-                    <input type="email" class="form-control" id="inputEmail4">
-                  </div>
-                  <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label">ISSN/ISBN</label>
-                    <input type="password" class="form-control" id="inputPassword4">
-                  </div>
-                  <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label">Pengarang</label>
-                    <input type="email" class="form-control" id="inputEmail4">
-                  </div>
-                  <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label">Penerbit</label>
-                    <input type="password" class="form-control" id="inputPassword4">
-                  </div>
-                </form>
-              </div>
-            </div>
-            <!--end of col-->
-          </div>
-        </div>
-      <!-- End About Section -->
-      
-    </main>
-    <!-- End #main -->
-
-
-    
-
-
     <a
       href="#"
       class="back-to-top d-flex align-items-center justify-content-center"

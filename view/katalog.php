@@ -41,44 +41,10 @@
     <link href="../assets/css/style.css" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  </head>
-  <body>
-    <!-- ======= Header ======= -->
-    <header
-      id="header"
-      class="fixed-top d-flex align-items-center header-koleksi"
-    >
-      <div class="container d-flex justify-content-between align-items-center">
-        <div id="logo">
-          <a href="../index.php"><img src="../assets/img/logo.png" alt="" /></a>
-        </div>
-      
-        <nav id="navbar" class="navbar">
-          <ul>
-            <li><a class="nav-link" href="../index.php">Home</a></li>
-            <li><a class="nav-link" href="koleksi.php">Collection</a></li>
-            <li><a class="nav-link active" href="#about">Catalog</a></li>
-            <li><a class="nav-link" href="#services">Favorite</a></li>
-            <li class="nav-item dropdown">
-              <button class="btn btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class='bx bx-menu' style='color:#ffffff;'></i>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="forms/logout.php"><i class='bx bx-log-in'> LogIn</i></a></li>
-                <li><a class="dropdown-item" href="forms/logout.php"><i class='bx bx-log-out'> LogOut</i></a></li>
-              </ul>
-            </li>
-            </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav>
-        <!-- .navbar -->
-      </div>
-    </header>
-    <!-- End Header -->
-
+    <!-- style -->
     <style>
     .scrollable-div {
-    min-height: 1000px;
+    min-height: 600px;
     overflow-y: scroll;
 
     }
@@ -165,6 +131,44 @@ input:placeholder-shown {
 
       
 </style>
+<!-- end -->
+
+  </head>
+  <body>
+    <!-- ======= Header ======= -->
+    <header
+      id="header"
+      class="fixed-top d-flex align-items-center header-koleksi"
+    >
+      <div class="container d-flex justify-content-between align-items-center">
+        <div id="logo">
+          <a href="../index.php"><img src="../assets/img/logo.png" alt="" /></a>
+        </div>
+      
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link" href="../index.php">Home</a></li>
+            <li><a class="nav-link" href="koleksi.php">Collection</a></li>
+            <li><a class="nav-link active" href="katalog.php">Catalog</a></li>
+            <li><a class="nav-link" href="profile.php">Profile</a></li>
+            <li class="nav-item dropdown">
+              <button class="btn btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class='bx bx-menu' style='color:#ffffff;'></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="forms/logout.php"><i class='bx bx-log-in'> LogIn</i></a></li>
+                <li><a class="dropdown-item" href="forms/logout.php"><i class='bx bx-log-out'> LogOut</i></a></li>
+              </ul>
+            </li>
+            </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
+      </div>
+    </header>
+    <!-- End Header -->
+
+  
 
 
       <!-- ======= About Section ======= -->
@@ -203,9 +207,33 @@ input:placeholder-shown {
                   </div>
                   <!--end of col-->
                 </div>
+                
 
               </form>
-              <p style="margin-top:10px;">Search by title, author or publisher</p>
+              <!-- Advance search-->
+              <div class="container pb-5">
+                <br>
+                <h5><center>Advanced Search</center></h5>
+                <form class="row g-3">
+                  <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Judul</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">ISSN/ISBN</label>
+                    <input type="password" class="form-control" id="inputPassword4">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Pengarang</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Penerbit</label>
+                    <input type="password" class="form-control" id="inputPassword4">
+                  </div>
+                </form>
+                <!-- end advance -->
+              </div>
             </div>
             <!--end of col-->
           </div>
@@ -225,43 +253,43 @@ input:placeholder-shown {
     <h1>Koleksi Terbaru</h1>
     <hr>
 
-    <div class="scrollable-div" style="max-height:600px;overflow-y:scroll;">
+    <div class="scrollable-div row-gap-2" style="max-height:600px;overflow-y:scroll;">
     <li class="list-group-item d-flex justify-content-between align-items-start">
       <div class="ms-2 me-auto" style="font-size: 12px;">
-      <a href="#" class="list-group-item list-group-item-action" style="color: blue;">A second link item</a>
-        Content for list item
+      <a href="#" class="list-group-item list-group-item-action" style="color: blue;">NIEBELS Methods, Standards, And Work Design</a>
+        Andris Freivalds, Benjamin W. Niebel
       </div>
     </li>
     <li class="list-group-item d-flex justify-content-between align-items-start">
       <div class="ms-2 me-auto" style="font-size: 12px;">
-      <a href="#" class="list-group-item list-group-item-action" style="color: blue;">A second link item</a>
-        Content for list item
-      </div> 
-    </li>
-    <li class="list-group-item d-flex justify-content-between align-items-start">
-      <div class="ms-2 me-auto" style="font-size: 12px;">
-      <a href="#" class="list-group-item list-group-item-action" style="color: blue;">A second link item</a>
-        Content for list item
+      <a href="#" class="list-group-item list-group-item-action" style="color: blue;">STRATEGI Visual</a>
+      Andry Masri
       </div>
     </li>
     <li class="list-group-item d-flex justify-content-between align-items-start">
       <div class="ms-2 me-auto" style="font-size: 12px;">
-      <a href="#" class="list-group-item list-group-item-action" style="color: blue;">A second link item</a>
-        Content for list item
+      <a href="#" class="list-group-item list-group-item-action" style="color: blue;">FIQH Muamalat: Sistem Transaksi Dalam Fiqh Islam</a>
+      Abdul Aziz Muhammad Azzam
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto" style="font-size: 12px;">
+      <a href="#" class="list-group-item list-group-item-action" style="color: blue;">ANALISIS Data Dengan Statistika Nonparametrik</a>
+      Nar Herrhyanto, Tuti Gantini
       </div>
     </li>
     <li class="list-group-item d-flex justify-content-between align-items-start">
       <div class="ms-2 me-auto" style="font-size: 12px;">
-      <a href="#" class="list-group-item list-group-item-action" style="color: blue;">A second link item</a>
-        Content for list item
+      <a href="#" class="list-group-item list-group-item-action" style="color: blue;">Nar Herrhyanto, Tuti Gantini</a>
+      Tere Liye
       </div>
     </li>
     <li class="list-group-item d-flex justify-content-between align-items-start">
       <div class="ms-2 me-auto" style="font-size: 12px;">
-      <a href="#" class="list-group-item list-group-item-action" style="color: blue;">A second link item</a>
-        Content for list item
+      <a href="#" class="list-group-item list-group-item-action" style="color: blue;">GEOGRAFI Kota dan Desa</a>
+      N. Daldjoeni
       </div>
     </li>
+    
     </div>
   </div>
   
@@ -270,36 +298,50 @@ input:placeholder-shown {
   <!-- end -->
 
   <!-- koleksi 2-->
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="font-size: medium;">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 " style="font-size: medium;">
       <div class="tg-widget tg-widgetdownload" style="padding:20px;background-color:#fff;">
-        <div class="tg-widgettitle">
+        <div class="container" style="background-color: #F4F5F1 ;">
           <h3>Koleksi</h3>
 			  </div>
-        <div class="tg-widgetcontent" style="padding:0px 10px;">
+        <div class="" style="padding:0px 10px;">
         <ul>
-	        <li><a href="#">Buku</a><span class="pull-right"> # judul, # eksemplar.</span></li><li><a href="#">Audio Visual</a><span class="pull-right"># judul, # eksemplar.</span></li><li><a href="#">Berkala / Serial</a><span class="pull-right"># judul, # eksemplar.</span></li>
+	        <li><a href="#">Buku</a><span class="pull-right"> # judul, # eksemplar.</span></li>
+          <li><a href="#">Audio Visual</a><span class="pull-right"># judul, # eksemplar.</span></li>
+          <li><a href="#">Berkala / Serial</a><span class="pull-right"># judul, # eksemplar.</span></li>
         </ul>
         </div>
       </div>
 
       <div class="tg-widget tg-widgetdownload" style="padding:20px;background-color:#fff;">
-        <div class="tg-widgettitle">
+        <div class="tg-widgettitle" style="background-color: #F4F5F1 ;">
 				  <h3>Grup Jenis Media</h3>
 			  </div>
-        <div class="tg-widgetcontent" style="padding:0px 10px;">
+        <div class="" style="padding:0px 10px;">
       <ul>
-	      <li><a href="#">Art Original</a> <span class="pull-right"># judul , # eksemplar.</span></li><li><a href="#">CD-ROM</a> <span class="pull-right"># judul , # eksemplar.</span></li><li><a href="#">Diskete</a> <span class="pull-right"># judul , # eksemplar.</span></li><li><a href="#">Electronic Resource</a> <span class="pull-right"># judul , # eksemplar.</span></li><li><a href="#">KASSETE</a> <span class="pull-right"># judul , # eksemplar.</span></li><li><a href="#">Text book</a> <span class="pull-right"># judul , # eksemplar.</span></li>
+	      <li><a href="#">Art Original</a> <span class="pull-right"># judul , # eksemplar.</span></li>
+        <li><a href="#">CD-ROM</a> <span class="pull-right"># judul , # eksemplar.</span></li>
+        <li><a href="#">Diskete</a> <span class="pull-right"># judul , # eksemplar.</span></li>
+        <li><a href="#">Electronic Resource</a> <span class="pull-right"># judul , # eksemplar.</span></li>
+        <li><a href="#">KASSETE</a> <span class="pull-right"># judul , # eksemplar.</span></li>
+        <li><a href="#">Text book</a> <span class="pull-right"># judul , # eksemplar.</span></li>
       </ul>
         </div>
       </div>
 
       <div class="tg-widget tg-widgetdownload" style="padding:20px;background-color:#fff;">
-        <div class="tg-widgettitle">
+        <div class="tg-widgettitle" style="background-color: #F4F5F1 ;">
 				  <h3>Grup Jenis Serial</h3>
 			  </div>
-        <div class="tg-widgetcontent" style="padding:0px 10px;">
+        <div class="" style="padding:0px 10px;">
         <ul>
-	        <li><a href="#">Buletin</a> <span class="pull-right"># judul , # eksemplar.</span></li><li><a href="#">Jurnal</a> <span class="pull-right"># judul , # eksemplar.</span></li><li><a href="#">Kliping</a> <span class="pull-right"># judul , # eksemplar.</span></li><li><a href="#">Koran</a> <span class="pull-right"># judul , # eksemplar.</span></li><li><a href="#">Laporan Kegiatan</a> <span class="pull-right"># judul , # eksemplar.</span></li><li><a href="#">Majalah</a> <span class="pull-right"># judul , # eksemplar.</span></li><li><a href="#">Prosiding</a> <span class="pull-right"># judul , # eksemplar.</span></li><li><a href="#">Tabloid</a> <span class="pull-right"># judul , # eksemplar.</span></li>
+	        <li><a href="#">Buletin</a> <span class="pull-right"># judul , # eksemplar.</span></li>
+          <li><a href="#">Jurnal</a> <span class="pull-right"># judul , # eksemplar.</span></li>
+          <li><a href="#">Kliping</a> <span class="pull-right"># judul , # eksemplar.</span></li>
+          <li><a href="#">Koran</a> <span class="pull-right"># judul , # eksemplar.</span></li>
+          <li><a href="#">Laporan Kegiatan</a> <span class="pull-right"># judul , # eksemplar.</span></li>
+          <li><a href="#">Majalah</a> <span class="pull-right"># judul , # eksemplar.</span></li>
+          <li><a href="#">Prosiding</a> <span class="pull-right"># judul , # eksemplar.</span></li>
+          <li><a href="#">Tabloid</a> <span class="pull-right"># judul , # eksemplar.</span></li>
         </ul>
         </div>
       </div>
