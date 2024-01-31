@@ -74,7 +74,7 @@
             </div>
 
             <!-- Nav Item - Tables -->
-            
+
             <li class="nav-item">
                 <a class="nav-link" href="buku.php">
                     <i class="fas fa-fw fa-table"></i>
@@ -196,12 +196,11 @@
 
                 <h1 class="m-5 text-dark">Dashboard</h1>
                 <br>
-
                 <section class="content">
                     <div class="container-fluid">
                         <div class="container text-center">
-                            <div class="row">
-                                <div class="col-md-4 col-sm-6">
+                            <div class="row align-items-center">
+                                <div class="col-4">
                                     <div class="card" style="width: 20rem;">
                                         <img src="../../assets/img/admin/book.jpg" class="card-img-top" alt="...">
                                         <div class="card-img-overlay">
@@ -209,7 +208,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-sm-6">
+                                <div class="col-4">
                                     <div class="card" style="width: 20rem;">
                                         <img src="../../assets/img/admin/user_1.jpg" class="card-img-top" alt="...">
                                         <div class="card-img-overlay">
@@ -217,7 +216,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-sm-6">
+
+                                <div class="col-4">
                                     <div class="card" style="width: 20rem;">
                                         <img src="../../assets/img/admin/admin_1.jpg" class="card-img-top" alt="...">
                                         <div class="card-img-overlay">
@@ -225,8 +225,20 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="col-4">
+                                    <div class="card" style="width: 20rem;">
+                                        <img src="../../assets/img/admin/admin_1.jpg" class="card-img-top" alt="...">
+                                        <div class="card-img-overlay">
+                                            <h3 class="card-title" style="color: #ffffff">Mendata</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
+
                         </div>
+                    </div>
                 </section>
 
                 <!-- Bootstrap core JavaScript-->
