@@ -63,7 +63,7 @@
 
   <!-- ======= Section ======= -->
   <section id="koleksi">
-    <div class="koleksi-container pt-5" data-aos="zoom-in" data-aos-delay="100">
+    <div class="koleksi-container py-3" data-aos="zoom-in" data-aos-delay="100">
       <center>
         <h1>Detail Buku</h1>
       </center>
@@ -83,72 +83,54 @@
       </div>
     </div> -->
 
-    <div class="container-sm position-absolute">
-      <div class="position-relative">
-        <div class="row">
-          <div class="col-md-7">
-            <table class="table table-condensed table-striped table-hover" width="100%">
-              <tbody>
-                <tr>
-                  <td rowspan="12">
-                    <img src="../assets/img/sampul/gmbr (1).jpeg" class="img-fluid mx-auto" style="width: 360px;" alt="...">
-                  </td>
-                  <td class="text-right" style="width:200px;vertical-align:top;">Pengarang :</td>
-                  <td>R. Kelly Rainer, Brad Prince</td>
-                </tr>
-                <tr>
-                  <td class="text-right" style="vertical-align:top;">Penerbit :</td>
-                  <td>John Wiley &amp; Sons</td>
-                </tr>
-                <tr>
-                  <td class="text-right" style="vertical-align:top;">Jenis :</td>
-                  <td>Buku</td>
-                </tr>
-                <tr>
-                  <td class="text-right" style="vertical-align:top;">Tipe Media :</td>
-                  <td>Text book</td>
-                </tr>
-                <tr>
-                  <td class="text-right" style="vertical-align:top;">Nomor Panggil :</td>
-                  <td>658.403 801 1 INT</td>
-                </tr>
-                <tr>
-                  <td class="text-right" style="vertical-align:top;">Klasifikasi :</td>
-                  <td>658.403 801 1</td>
-                </tr>
-                <tr>
-                  <td class="text-right" style="vertical-align:top;">Tahun Terbit :</td>
-                  <td>2022</td>
-                </tr>
-                <tr>
-                  <td class="text-right" style="vertical-align:top;">Edisi :</td>
-                  <td>9</td>
-                </tr>
-                <tr>
-                  <td class="text-right" style="vertical-align:top;">Subjek :</td>
-                  <td><span>1. SISTEM INFORMASI<br>
-                      2. JURUSAN SISTEM INFORMASI</span></td>
-                </tr>
-                <tr>
-                  <td class="text-right" style="vertical-align:top;">ISBN/ISSN :</td>
-                  <td><span>978-1-119-85993-2</span></td>
-                </tr>
-                <tr>
-                  <td class="text-right" style="vertical-align:top;">Notasi :</td>
-                  <td><span>ISBN 978-1-119-85993-2<br>
-                      Index: hlm. 551-578</span></td>
-                </tr>
-                <tr>
-                  <td class="text-right" style="vertical-align:top;">Sumber Pustaka :</td>
-                  <td><span>PERPUSTAKAAN UNIKOM</span></td>
-                </tr>
-              </tbody>
-            </table>
+    <div class="wrapper">
+        <div class="container-xxl position-absolute text-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="position-relative">
+            <div class="row text-center">
+              <div class="col-md-6 col-sm-12"><img src="../assets/img/sampul/gmbr (1).jpeg" class="img-fluid mx-auto" style="width: 360px;" alt="..."></div>
+              <div class="col-md-6 col-sm-12">
+                <table class="table table-condensed table-striped table-hover" width="100%">
+                  <tbody>
+                    <tr>
+                      <td class="text-right" style="width:200px;vertical-align:top;">Pengarang :</td>
+                      <td>R. Kelly Rainer, Brad Prince</td>
+                    </tr>
+                    <tr>
+                      <td class="text-right" style="vertical-align:top;">Penerbit :</td>
+                      <td>John Wiley &amp; Sons</td>
+                    </tr>
+                    <tr>
+                      <td class="text-right" style="vertical-align:top;">Jenis :</td>
+                      <td>Buku</td>
+                    </tr>
+                    <tr>
+                      <td class="text-right" style="vertical-align:top;">Tipe Media :</td>
+                      <td>Text book</td>
+                    </tr>
+                    <tr>
+                      <td class="text-right" style="vertical-align:top;">Tahun Terbit :</td>
+                      <td>2022</td>
+                    </tr>
+                    <tr>
+                      <td class="text-right" style="vertical-align:top;">Edisi :</td>
+                      <td>9</td>
+                    </tr>
+                    <tr>
+                      <td class="text-right" style="vertical-align:top;">Subjek :</td>
+                      <td><span>1. SISTEM INFORMASI<br>
+                          2. JURUSAN SISTEM INFORMASI</span></td>
+                    </tr>
+                    <tr>
+                      <td class="text-right" style="vertical-align:top;">ISBN/ISSN :</td>
+                      <td><span>978-1-119-85993-2</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
 
   </section>
   <!-- End Section -->
