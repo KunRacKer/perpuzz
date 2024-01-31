@@ -190,7 +190,7 @@
                 </div>
                 <section class="content">
                     <div class="container-fluid">
-                        <div class="container text-center">
+                        <div class="container-xxl">
                             <div class="card">
                                 <div class="card-header">
                                     <h3 class="card-title">Data Buku</h3>
@@ -211,7 +211,7 @@
                                                 <th>Subjek</th>
                                                 <th>Jumlah</th>
                                                 <th>Gambar</th>
-                                                <th>Aksi</th>
+                                                <th colspan="2"><center>Aksi</center> </th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -226,7 +226,8 @@
                                             <td>9</td>
                                             <td>0</td>
                                             <td>0</td>
-                                            <td>0 </td>
+                                            <td> <button class="btn btn-primary" type="button"><a href="#" style="color: white">Ubah</a></button></td>
+                                            <td> <button class="btn btn-primary" type="button"><a href="#" style="color: white">Hapus</a></button></td>
                                         </tbody>
                                         <tfoot>
                                             <tr>
@@ -241,7 +242,7 @@
                                                 <th>Subjek</th>
                                                 <th>Jumlah</th>
                                                 <th>Gambar</th>
-                                                <th>Aksi</th>
+                                                <th colspan="2"><center>Aksi</center> </th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -250,11 +251,6 @@
                             </div>
                         </div>
                 </section>
-
-                <div class="container">
-                    <a href="#"><button class="btn btn-primary" type="button">Ubah</button></a>
-                    <a href="#"><button class="btn btn-primary" type="button">Hapus</button></a>
-                </div>
             </div>
         </div>
     </div>
@@ -293,7 +289,6 @@
     <!-- AdminLTE App -->
     <script src="../../dist/js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="../../dist/js/demo.js"></script>
     <!-- Page specific script -->
     <script>
         $(function() {

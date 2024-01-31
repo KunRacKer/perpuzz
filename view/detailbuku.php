@@ -42,8 +42,8 @@
         <ul>
           <li><a class="nav-link" href="../index.php">Home</a></li>
           <li><a class="nav-link active" href="koleksi.php">Collection</a></li>
-          <li><a class="nav-link" href="#about">Catalog</a></li>
-          <li><a class="nav-link" href="#services">Favorite</a></li>
+          <li><a class="nav-link" href="katalog.php">Catalog</a></li>
+          <li><a class="nav-link" href="profile.php">Profile</a></li>
           <li class="nav-item dropdown">
             <button class="btn btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
               <i class='bx bx-menu' style='color:#ffffff;'></i>
@@ -82,8 +82,6 @@
         </div>
       </div>
     </div> -->
-
-    <div class="wrapper">
         <div class="container-xxl position-absolute text-center" data-aos="zoom-in" data-aos-delay="100">
           <div class="position-relative">
             <div class="row text-center">
@@ -126,11 +124,14 @@
                     </tr>
                   </tbody>
                 </table>
+                    <a href="tambahbuku.php"><button type="button" class="btn btn-primary mx-3 mb-3 col-md-5">Pinjam</button></a>
               </div>
+              
             </div>
           </div>
         </div>
-      </div>
+
+        
 
   </section>
   <!-- End Section -->

@@ -57,7 +57,7 @@
             <li><a class="nav-link" href="../index.php">Home</a></li>
             <li><a class="nav-link active" href="koleksi.php">Collection</a></li>
             <li><a class="nav-link" href="katalog.php">Catalog</a></li>
-            <li><a class="nav-link" href="#services">Favorite</a></li>
+            <li><a class="nav-link" href="profile.php">Profile</a></li>
             <li class="nav-item dropdown">
               <button class="btn btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class='bx bx-menu' style='color:#ffffff;'></i>
