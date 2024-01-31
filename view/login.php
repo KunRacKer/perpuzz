@@ -67,6 +67,13 @@
           </form>
         </div>
       </div>
+      <br>
+      <br>
+      <div class="button">
+        <center>
+        <button type="button" class="btn btn-block btn-default"> <a href="loginadmin.php" style="text-decoration: none">Login As Admin</a></button>
+        </center>
+            </div>
     </div>
 <script>
   const loginText = document.querySelector(".title-text .login");

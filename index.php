@@ -68,7 +68,7 @@
     >
       <div class="container d-flex justify-content-between align-items-center">
         <div id="logo">
-          <a href="index.php"><img src="assets/img/logo.png" alt="" /></a>
+          <a href="index.php"><img src="assets/img/logo.png" alt="" style="background:rgba();"/></a>
         </div>
 
         <nav id="navbar" class="navbar">
