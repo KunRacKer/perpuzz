@@ -61,7 +61,7 @@
             </div>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="mendata.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Mendata</span></a>
@@ -96,14 +96,13 @@
             </div>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="petugas.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Petugas</span></a>
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
-
 
         </ul>
         <!-- End of Sidebar -->
@@ -191,27 +190,27 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                <h1 class="m-5 text-dark">Petugas</h1>
+                <h1 class="m-5 text-dark">Mendata</h1>
                 <br>
-                <a href="tambahpetugas.php"><button type="button" class="btn btn-primary mx-4 mb-3 col-md-2">Tambah Data Petugas</button></a>
                 <section class="content">
                     <div class="container-fluid">
                         <div class="container-xxl">
                             <div class="card text-center">
                                 <div class="card-header">
-                                    <h3 class="card-title">Data Petugas</h3>
+                                    <h3 class="card-title">Data Mendata</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
+                                            <th>No Pinjam</th>
+                                            <th>ID_Anggota</th>
                                                 <th>ID_Petugas</th>
-                                                <th>Nama_Petugas</th>
-                                                <th>Email</th>
-                                                <th>No_telepon</th>
-                                                <th colspan="2"><center>Aksi</center> </th>
-                                             
+                                                <th>ISBN_ISSN</th>
+                                                <th>Tgl Pinjam</th>
+                                                <th>Tgl Kembali</th>
+                                                <th colspan="2"><center>Aksi</center> </th>                                            
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -219,17 +218,21 @@
                                             <td>2</td>
                                             <td>3</td>
                                             <td> 4</td>
+                                            <td> 4</td>
+                                            <td> 4</td>
                                             <td> <button class="btn btn-primary" type="button"><a href="#" style="color: white">Ubah</a></button></td>
-                                            <td> <button class="btn btn-primary" type="button"><a href="#" style="color: white">Hapus</a></button></td>
+                                            <td> <button class="btn btn-primary" type="button"><a href="#" style="color: white">Selesai</a></button></td>
                                         
                                         </tbody>
                                         <tfoot>
-                                            <tr>
+                                        <tr>
+                                            <th>No Pinjam</th>
+                                            <th>ID_Anggota</th>
                                                 <th>ID_Petugas</th>
-                                                <th>Nama_Petugas</th>
-                                                <th>Email</th>
-                                                <th>No_telepon</th>
-                                                <th colspan="2"><center>Aksi</center> </th>
+                                                <th>ISBN_ISSN</th>
+                                                <th>Tgl Pinjam</th>
+                                                <th>Tgl Kembali</th>
+                                                <th colspan="2"><center>Aksi</center> </th>                                            
                                             </tr>
                                         </tfoot>
                                     </table>

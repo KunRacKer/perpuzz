@@ -57,6 +57,17 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
+                Mendata
+            </div>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="mendata.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Mendata</span></a>
+            </li>
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
                 Buku
             </div>
 
@@ -93,10 +104,6 @@
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
 
         </ul>
         <!-- End of Sidebar -->
@@ -188,8 +195,8 @@
                 <br>
                 <section class="content">
                     <div class="container-fluid">
-                        <div class="container text-center">
-                            <div class="card">
+                        <div class="container-xxl">
+                            <div class="card text-center">
                                 <div class="card-header">
                                     <h3 class="card-title">Data User</h3>
                                 </div>
@@ -203,6 +210,7 @@
                                                 <th>Email</th>
                                                 <th>No_telepon</th>
                                                 <th>Alamat</th>
+                                                <th colspan="2"><center>Aksi</center> </th>
                                              
                                             </tr>
                                         </thead>
@@ -212,6 +220,8 @@
                                             <td>3</td>
                                             <td> 4</td>
                                             <td>5</td>
+                                            <td> <button class="btn btn-primary" type="button"><a href="#" style="color: white">Ubah</a></button></td>
+                                            <td> <button class="btn btn-primary" type="button"><a href="#" style="color: white">Hapus</a></button></td>
                                         
                                         </tbody>
                                         <tfoot>
@@ -221,6 +231,7 @@
                                                 <th>Email</th>
                                                 <th>No_telepon</th>
                                                 <th>Alamat</th>
+                                                <th colspan="2"><center>Aksi</center> </th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -230,10 +241,6 @@
                             </div>
                         </div>
                 </section>
-                <div class="container">
-                                    <a href="#"><button class="btn btn-primary" type="button">Ubah</button></a>
-                                    <a href="#"><button class="btn btn-primary" type="button">Hapus</button></a>
-                                </div>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
