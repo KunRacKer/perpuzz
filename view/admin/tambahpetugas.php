@@ -36,7 +36,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="admin.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -47,7 +47,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="admin.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -57,7 +57,6 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-
             <div class="sidebar-heading">
                 Mendata
             </div>
@@ -74,7 +73,6 @@
             </div>
 
             <!-- Nav Item - Tables -->
-
             <li class="nav-item">
                 <a class="nav-link" href="buku.php">
                     <i class="fas fa-fw fa-table"></i>
@@ -99,14 +97,13 @@
             </div>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="petugas.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Petugas</span></a>
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
-
 
         </ul>
         <!-- End of Sidebar -->
@@ -194,65 +191,53 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                <h1 class="m-5 text-dark">Dashboard</h1>
-                <br>
-                <section class="content">
-                    <div class="container-fluid">
-                        <div class="container text-center">
-                            <div class="row align-items-center">
-                                <div class="col-4">
-                                    <div class="card" style="width: 20rem;">
-                                        <img src="../../assets/img/admin/book.jpg" class="card-img-top" alt="...">
-                                        <div class="card-img-overlay">
-                                            <h3 class="card-title" style="color: #ffffff">Buku</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="card" style="width: 20rem;">
-                                        <img src="../../assets/img/admin/user_1.jpg" class="card-img-top" alt="...">
-                                        <div class="card-img-overlay">
-                                            <h3 class="card-title" style="color: #ffffff">User</h3>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-4">
-                                    <div class="card" style="width: 20rem;">
-                                        <img src="../../assets/img/admin/admin_1.jpg" class="card-img-top" alt="...">
-                                        <div class="card-img-overlay">
-                                            <h3 class="card-title" style="color: #ffffff">Petugas</h3>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-4">
-                                    <div class="card" style="width: 20rem;">
-                                        <img src="../../assets/img/admin/admin_1.jpg" class="card-img-top" alt="...">
-                                        <div class="card-img-overlay">
-                                            <h3 class="card-title" style="color: #ffffff">Mendata</h3>
-                                        </div>
-                                    </div>
-                                </div>
-
+                <h1 class="m-5 text-dark"> Tambah Buku</h1>
+                <div class="card card-primary">
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">ID Petugas</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan ID Petugas">
                             </div>
-
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nama</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama petugas">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Email Petugas">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">No. Telp</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan No. Telp Petugas">
+                            </div>
                         </div>
-                    </div>
-                </section>
+                        <!-- /.card-body -->
 
-                <!-- Bootstrap core JavaScript-->
-                <script src="vendor/jquery/jquery.min.js"></script>
-                <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                            <button type="submit" class="btn btn-default float-right"> <a href="petugas.php">Kembali</a> </button>
+                        </div>
 
-                <!-- Core plugin JavaScript-->
-                <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+                    </form>
+                </div>
+            </div>
+            <!-- Bootstrap core JavaScript-->
+            <script src="vendor/jquery/jquery.min.js"></script>
+            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-                <!-- Custom scripts for all pages-->
-                <script src="js/sb-admin-2.min.js"></script>
+            <!-- Core plugin JavaScript-->
+            <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-                <!-- Page level plugins -->
-                <script src="vendor/chart.js/Chart.min.js"></script>
+            <!-- Custom scripts for all pages-->
+            <script src="js/sb-admin-2.min.js"></script>
+
+            <!-- Page level plugins -->
+            <script src="vendor/chart.js/Chart.min.js"></script>
+
+            <!-- Page level custom scripts -->
 
 </body>
 

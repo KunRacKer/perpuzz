@@ -33,7 +33,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-na bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
@@ -57,6 +57,17 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
+            <div class="sidebar-heading">
+                Mendata
+            </div>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="mendata.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Mendata</span></a>
+            </li>
+            <hr class="sidebar-divider">
             <div class="sidebar-heading">
                 Buku
             </div>
@@ -94,10 +105,6 @@
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
 
         </ul>
         <!-- End of Sidebar -->
@@ -185,13 +192,13 @@
 
                 <h1 class="m-5 text-dark">Buku</h1>
                 <br>
-                <div class="container-fluid text-left ml-3 ml-4 ml-5">
+                <div class="container-fluid">
                     <a href="tambahbuku.php"><button type="button" class="btn btn-primary mx-4 mb-3 col-md-2">Tambah Data Buku</button></a>
                 </div>
                 <section class="content">
                     <div class="container-fluid">
                         <div class="container-xxl">
-                            <div class="card">
+                            <div class="card text-center">
                                 <div class="card-header">
                                     <h3 class="card-title">Data Buku</h3>
                                 </div>

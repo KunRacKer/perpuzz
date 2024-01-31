@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
 
-    <title>Dashboard Admin</title>
+<title>Dashboard Admin</title>
 
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<!-- Custom fonts for this template-->
+<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-    <!-- Custom styles for this template-->
-    <link href="../../assets/css/admin/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
-    <!-- DataTables -->
-    <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-    <link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+<!-- Custom styles for this template-->
+<link href="../../assets/css/admin/sb-admin-2.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+<!-- DataTables -->
+<link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+<link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+<!-- Theme style -->
+<link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 
 </head>
 
@@ -47,7 +46,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item ">
                 <a class="nav-link" href="admin.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -57,13 +56,12 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-
             <div class="sidebar-heading">
                 Mendata
             </div>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="mendata.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Mendata</span></a>
@@ -74,7 +72,6 @@
             </div>
 
             <!-- Nav Item - Tables -->
-
             <li class="nav-item">
                 <a class="nav-link" href="buku.php">
                     <i class="fas fa-fw fa-table"></i>
@@ -106,7 +103,6 @@
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
-
 
         </ul>
         <!-- End of Sidebar -->
@@ -194,66 +190,110 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                <h1 class="m-5 text-dark">Dashboard</h1>
+                <h1 class="m-5 text-dark">Mendata</h1>
                 <br>
                 <section class="content">
                     <div class="container-fluid">
-                        <div class="container text-center">
-                            <div class="row align-items-center">
-                                <div class="col-4">
-                                    <div class="card" style="width: 20rem;">
-                                        <img src="../../assets/img/admin/book.jpg" class="card-img-top" alt="...">
-                                        <div class="card-img-overlay">
-                                            <h3 class="card-title" style="color: #ffffff">Buku</h3>
-                                        </div>
-                                    </div>
+                        <div class="container-xxl">
+                            <div class="card text-center">
+                                <div class="card-header">
+                                    <h3 class="card-title">Data Mendata</h3>
                                 </div>
-                                <div class="col-4">
-                                    <div class="card" style="width: 20rem;">
-                                        <img src="../../assets/img/admin/user_1.jpg" class="card-img-top" alt="...">
-                                        <div class="card-img-overlay">
-                                            <h3 class="card-title" style="color: #ffffff">User</h3>
-                                        </div>
-                                    </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <table id="example1" class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                            <th>No Pinjam</th>
+                                            <th>ID_Anggota</th>
+                                                <th>ID_Petugas</th>
+                                                <th>ISBN_ISSN</th>
+                                                <th>Tgl Pinjam</th>
+                                                <th>Tgl Kembali</th>
+                                                <th colspan="2"><center>Aksi</center> </th>                                            
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td> 4</td>
+                                            <td> 4</td>
+                                            <td> 4</td>
+                                            <td> <button class="btn btn-primary" type="button"><a href="#" style="color: white">Ubah</a></button></td>
+                                            <td> <button class="btn btn-primary" type="button"><a href="#" style="color: white">Selesai</a></button></td>
+                                        
+                                        </tbody>
+                                        <tfoot>
+                                        <tr>
+                                            <th>No Pinjam</th>
+                                            <th>ID_Anggota</th>
+                                                <th>ID_Petugas</th>
+                                                <th>ISBN_ISSN</th>
+                                                <th>Tgl Pinjam</th>
+                                                <th>Tgl Kembali</th>
+                                                <th colspan="2"><center>Aksi</center> </th>                                            
+                                            </tr>
+                                        </tfoot>
+                                    </table>
                                 </div>
-
-                                <div class="col-4">
-                                    <div class="card" style="width: 20rem;">
-                                        <img src="../../assets/img/admin/admin_1.jpg" class="card-img-top" alt="...">
-                                        <div class="card-img-overlay">
-                                            <h3 class="card-title" style="color: #ffffff">Petugas</h3>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-4">
-                                    <div class="card" style="width: 20rem;">
-                                        <img src="../../assets/img/admin/admin_1.jpg" class="card-img-top" alt="...">
-                                        <div class="card-img-overlay">
-                                            <h3 class="card-title" style="color: #ffffff">Mendata</h3>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                <!-- /.card-body -->
+                                
                             </div>
-
                         </div>
-                    </div>
                 </section>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-                <!-- Bootstrap core JavaScript-->
-                <script src="vendor/jquery/jquery.min.js"></script>
-                <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-                <!-- Core plugin JavaScript-->
-                <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
 
-                <!-- Custom scripts for all pages-->
-                <script src="js/sb-admin-2.min.js"></script>
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
 
-                <!-- Page level plugins -->
-                <script src="vendor/chart.js/Chart.min.js"></script>
-
+    <!-- Page level custom scripts -->
+    <!-- jQuery -->
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables  & Plugins -->
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/jszip/jszip.min.js"></script>
+    <script src="../../plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="../../plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <!-- Page specific script -->
+    <script>
+        $(function() {
+            $("#example1").DataTable({
+                "responsive": true,
+                "lengthChange": false,
+                "autoWidth": false,
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
+    </script>
 </body>
-
 </html>
