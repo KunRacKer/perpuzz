@@ -200,38 +200,42 @@
                     <div class="container-fluid">
                         <div class="container text-center">
                             <div class="row align-items-center">
-                                <div class="col-md-6 ">
-                                    <div class="card" style="width: 20rem;">
-                                        <img src="../../assets/img/admin/book.jpg" class="card-img-top" alt="...">
+                                <div class="col-md-6 mb-6">
+                                    <div class="card" style="width: 20rem;"><a href="buku.php">
+                                    <img src="../../assets/img/admin/book.jpg" class="card-img-top" alt="...">
                                         <div class="card-img-overlay">
                                             <h3 class="card-title" style="color: #ffffff">Buku</h3>
                                         </div>
+                                    </a>
                                     </div>
                                 </div>
-                                <div class="col-md-6 ">
-                                    <div class="card" style="width: 20rem;">
-                                        <img src="../../assets/img/admin/user_1.jpg" class="card-img-top" alt="...">
+                                <div class="col-md-6 mb-6">
+                                    <div class="card" style="width: 20rem;"><a href="user.php">
+                                    <img src="../../assets/img/admin/user_1.jpg" class="card-img-top" alt="...">
                                         <div class="card-img-overlay">
                                             <h3 class="card-title" style="color: #ffffff">User</h3>
                                         </div>
+                                    </a>
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 ">
-                                    <div class="card" style="width: 20rem;">
-                                        <img src="../../assets/img/admin/admin_1.jpg" class="card-img-top" alt="...">
+                                <div class="col-md-6 mb-6">
+                                    <div class="card" style="width: 20rem;"><a href="petugas.php">
+                                    <img src="../../assets/img/admin/admin_1.jpg" class="card-img-top" alt="...">
                                         <div class="card-img-overlay">
                                             <h3 class="card-title" style="color: #ffffff">Petugas</h3>
                                         </div>
+                                    </a>
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 ">
-                                    <div class="card" style="width: 20rem;">
-                                        <img src="../../assets/img/admin/admin_1.jpg" class="card-img-top" alt="...">
+                                <div class="col-md-6 mb-6">
+                                    <div class="card" style="width: 20rem;"><a href="mendata.php">
+                                    <img src="../../assets/img/admin/mendata.jpg" class="card-img-top" alt="...">
                                         <div class="card-img-overlay">
                                             <h3 class="card-title" style="color: #ffffff">Mendata</h3>
                                         </div>
+                                    </a>
                                     </div>
                                 </div>
 
