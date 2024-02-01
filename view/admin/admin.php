@@ -200,7 +200,7 @@
                     <div class="container-fluid">
                         <div class="container text-center">
                             <div class="row align-items-center">
-                                <div class="col-md-6 mb-6">
+                                <div class="col-md-6 ">
                                     <div class="card" style="width: 20rem;">
                                         <img src="../../assets/img/admin/book.jpg" class="card-img-top" alt="...">
                                         <div class="card-img-overlay">
@@ -208,7 +208,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-6">
+                                <div class="col-md-6 ">
                                     <div class="card" style="width: 20rem;">
                                         <img src="../../assets/img/admin/user_1.jpg" class="card-img-top" alt="...">
                                         <div class="card-img-overlay">
@@ -217,7 +217,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 mb-6">
+                                <div class="col-md-6 ">
                                     <div class="card" style="width: 20rem;">
                                         <img src="../../assets/img/admin/admin_1.jpg" class="card-img-top" alt="...">
                                         <div class="card-img-overlay">
@@ -226,7 +226,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 mb-6">
+                                <div class="col-md-6 ">
                                     <div class="card" style="width: 20rem;">
                                         <img src="../../assets/img/admin/admin_1.jpg" class="card-img-top" alt="...">
                                         <div class="card-img-overlay">
