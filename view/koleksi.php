@@ -1,3 +1,17 @@
+<?php
+  session_start(); // Start a session
+
+  if (!isset($_SESSION['Email'])) {
+      header("Location: view/login.php");
+      exit(); // Stop further execution of the page
+  }
+  if (!empty($_SESSION['ID_anggota'])) {
+      $role = 1;
+  }
+  elseif (!empty($_SESSION['ID_petugas'])) {
+      $role = 2;
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -49,7 +63,7 @@
     >
       <div class="container d-flex justify-content-between align-items-center">
         <div id="logo">
-          <a href="index.php"><img src="../assets/img/logo.png" alt="" /></a>
+          <a href="../index.php"><img src="../assets/img/logo.png" alt="" /></a>
         </div>
       
         <nav id="navbar" class="navbar">
@@ -86,21 +100,22 @@
 <?php
 // fetching data
 include '../forms/koneksi.php';
-$query = "SELECT Judul, Gambar FROM buku ORDER BY Judul ASC";
+$query = "SELECT ISBN_ISSN, Judul, Gambar FROM buku ORDER BY Judul ASC";
 $result = mysqli_query($koneksi, $query);
 ?>
         <!-- content -->
-        <div class="container px-3" data-aos="zoom-in" data-aos-delay="100">
+        <div class="container px-3" data-aos="fade-up" data-aos-delay="100">
             <div class="row">
                 <?php while ($d = mysqli_fetch_object($result)) { ?>
-                <div class="col-md-3 col-sm-6">
-                    <div class="card my-4"><a href="#">
+                <div class="col-md-3 col-sm-6"><a href="detailbuku.php?ISBN_ISSN=<?= $d->ISBN_ISSN; ?>">
+                    <div class="card my-4">
                         <img src="../assets/img/sampul/<?= $d->Gambar; ?>" alt="<?= $d->Judul; ?>" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title"><?= $d->Judul; ?></h5>
                         </div>
-                    </a></div>
-                </div>
+                        
+                    </div>
+                </a></div>
                 <?php } ?>
             </div>
         </div>

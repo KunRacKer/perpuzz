@@ -63,66 +63,62 @@
 
   <!-- ======= Section ======= -->
   <section id="koleksi">
-    <div class="koleksi-container py-3" data-aos="zoom-in" data-aos-delay="100">
+    <div class="koleksi-container pt-5" data-aos="zoom-in" data-aos-delay="100">
       <center>
         <h1>Detail Buku</h1>
       </center>
     </div>
 
-    <!-- <div class="container overflow-hidden text-center">
-      <div class="row gx-5">
-        <div class="container-fluid justify-content-center">
-          <div id="tg-twocolumns" class="tg-twocolumns">
-            <div class="col">
-              <div class="clearfix">
-                <img src="../assets/img/sampul/gmbr (1).jpeg" class="col-md-3 float-md-end mb-3 ms-md-3" alt="...">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-        <div class="container-xxl position-absolute text-center" data-aos="zoom-in" data-aos-delay="100">
+<?php
+include "../forms/koneksi.php";
+$id = $_GET['ISBN_ISSN'];
+$stmt = $koneksi->prepare("SELECT * FROM buku WHERE ISBN_ISSN = ?");
+$stmt->bind_param("s", $id);
+$stmt->execute();
+$result = $stmt->get_result();
+while($d = $result->fetch_object()) {
+?>
+        <div class="container-xxl position-absolute text-center pt-3" data-aos="fade-up" data-aos-delay="100">
           <div class="position-relative">
             <div class="row text-center">
-              <div class="col-md-6 col-sm-12"><img src="../assets/img/sampul/gmbr (1).jpeg" class="img-fluid mx-auto" style="width: 360px;" alt="..."></div>
+              <div class="col-md-6 col-sm-12"><img src="../assets/img/sampul/<?= $d->Gambar; ?>" class="img-fluid mx-auto" style="width: 360px;" alt="..."></div>
               <div class="col-md-6 col-sm-12">
                 <table class="table table-condensed table-striped table-hover" width="100%">
                   <tbody>
                     <tr>
                       <td class="text-right" style="width:200px;vertical-align:top;">Pengarang :</td>
-                      <td>R. Kelly Rainer, Brad Prince</td>
+                      <td><?= $d->Pengarang; ?></td>
                     </tr>
                     <tr>
                       <td class="text-right" style="vertical-align:top;">Penerbit :</td>
-                      <td>John Wiley &amp; Sons</td>
+                      <td><?= $d->Penerbit; ?></td>
                     </tr>
                     <tr>
                       <td class="text-right" style="vertical-align:top;">Jenis :</td>
-                      <td>Buku</td>
+                      <td><?= $d->Jenis; ?></td>
                     </tr>
                     <tr>
                       <td class="text-right" style="vertical-align:top;">Tipe Media :</td>
-                      <td>Text book</td>
+                      <td><?= $d->Tipe_media; ?></td>
                     </tr>
                     <tr>
                       <td class="text-right" style="vertical-align:top;">Tahun Terbit :</td>
-                      <td>2022</td>
+                      <td><?= $d->Tahun_terbit; ?></td>
                     </tr>
                     <tr>
                       <td class="text-right" style="vertical-align:top;">Edisi :</td>
-                      <td>9</td>
+                      <td><?= $d->Edisi; ?></td>
                     </tr>
                     <tr>
                       <td class="text-right" style="vertical-align:top;">Subjek :</td>
-                      <td><span>1. SISTEM INFORMASI<br>
-                          2. JURUSAN SISTEM INFORMASI</span></td>
+                      <td><span><?= $d->Subjek; ?></span></td>
                     </tr>
                     <tr>
                       <td class="text-right" style="vertical-align:top;">ISBN/ISSN :</td>
-                      <td><span>978-1-119-85993-2</span></td>
+                      <td><span><?= $d->ISBN_ISSN; ?></span></td>
                     </tr>
                   </tbody>
+                  <?php } ?>
                 </table>
                     <a href="tambahbuku.php"><button type="button" class="btn btn-primary mx-3 mb-3 col-md-5">Pinjam</button></a>
               </div>

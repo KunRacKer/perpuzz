@@ -1,10 +1,6 @@
 <?php
   session_start(); // Start a session
 
-  if (!isset($_SESSION['Email'])) {
-      header("Location: view/login.php");
-      exit(); // Stop further execution of the page
-  }
   if (!empty($_SESSION['ID_anggota'])) {
       $role = 1;
   }
@@ -96,7 +92,7 @@
 
     <!-- ======= Hero Section ======= -->
     <section id="hero">
-      <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+      <div class="hero-container" data-aos="fade-up" data-aos-delay="100">
         <h1>Welcome to Perpuzz</h1>
         <h2>
           Bridging the Gap Between Books and Bytes
