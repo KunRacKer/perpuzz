@@ -113,41 +113,57 @@
         <div class="col-sm-12 col-md-9">
             <div class="container shadow-box">
             
-                <div class="mb-3 row">
-                    <label for="idanggota" class="col-sm-2 col-form-label">ID</label>
-                    <div class="col-sm-10">
-                        <input type="text" readonly class="form-control-plaintext" id="idanggota" value="1301">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">NAMA</label>
-                    <div class="col-sm-10">
-                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Dinar">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">EMAIL</label>
-                    <div class="col-sm-10">
-                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="dinar04@gmail.com">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">NO TELEPON</label>
-                    <div class="col-sm-10">
-                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="+62 885-1648-76">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">ALAMAT</label>
-                    <div class="col-sm-10">
-                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="CIMAHI">
-                    </div>
-                </div>
+            <div class="container">
+  <div class="row g-3 align-items-center">
+    <div class="col-auto">
+      <label for="ID" class="col-form-label">ID</label>
+    </div>
+    <div class="col-auto">
+      <input id="ID" class="form-control">
+    </div>
+  </div>
+
+  <div class="row g-3 align-items-center">
+    <div class="col-auto">
+      <label for="nama" class="col-form-label">Nama</label>
+    </div>
+    <div class="col-auto">
+      <input id="nama" class="form-control">
+    </div>
+  </div>
+
+  <div class="row g-3 align-items-center">
+    <div class="col-auto">
+      <label for="email" class="col-form-label">Email</label>
+    </div>
+    <div class="col-auto">
+      <input type="email" id="email" class="form-control">
+    </div>
+  </div>
+
+  <div class="row g-3 align-items-center">
+    <div class="col-auto">
+      <label for="notelp" class="col-form-label">No Telepon</label>
+    </div>
+    <div class="col-auto">
+      <input id="notelp" class="form-control">
+    </div>
+  </div>
+
+  <div class="row g-3 align-items-center">
+    <div class="col-auto">
+      <label for="alamat" class="col-form-label">Alamat</label>
+    </div>
+    <div class="col-auto">
+      <input id="alamat" class="form-control">
+    </div>
+  </div>
+</div>
                 <div style="display: flex; justify-content: center;">
-                <a class="btn btn-primary " href="#" role="button" >Edit</a>
+                <a class="btn btn-primary " href="#" role="button" >Konfirmasi</a>
                     </div>
                 <div style="display: flex; justify-content: center;" id="btn2">
-                    <a class="btn btn-primary " href="#" role="button">List Buku Yang Dipinjam</a>
+                    <a class="btn btn-primary " href="#" role="button">Kembali</a>
                 </div>
             </div>
         </div>
