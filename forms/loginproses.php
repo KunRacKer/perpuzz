@@ -22,6 +22,12 @@ if ($result->num_rows > 0) {
     $_SESSION['Email'] = $row['Email'];
     $_SESSION['ID_anggota'] = $row['ID_anggota'];
     $_SESSION['ID_petugas'] = $row['ID_petugas'];
+    // if (!empty($_SESSION['ID_anggota'])) {
+    //     $role = 1;
+    // }
+    // elseif (!empty($_SESSION['ID_petugas'])) {
+    //     $role = 2;
+    // }
 
     // Redirect to dashboard or desired page
     header("Location: ../index.php");

@@ -1,12 +1,5 @@
 <?php
   session_start(); // Start a session
-
-  if (!empty($_SESSION['ID_anggota'])) {
-      $role = 1;
-  }
-  elseif (!empty($_SESSION['ID_petugas'])) {
-      $role = 2;
-  }
 ?>
 <!DOCTYPE html>
 <html lang="en">

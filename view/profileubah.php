@@ -1,3 +1,11 @@
+<?php
+  session_start(); // Start a session
+
+  if (!isset($_SESSION['Email'])) {
+      header("Location: login.php");
+      exit(); // Stop further execution of the page
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,15 +80,14 @@
         <nav id="navbar" class="navbar">
           <ul>
             <li><a class="nav-link" href="../index.php">Home</a></li>
-            <li><a class="nav-link active" href="koleksi.php">Collection</a></li>
+            <li><a class="nav-link " href="koleksi.php">Collection</a></li>
             <li><a class="nav-link" href="katalog.php">Catalog</a></li>
-            <li><a class="nav-link" href="profile.php">Profile</a></li>
+            <li><a class="nav-link active" href="profile.php">Profile</a></li>
             <li class="nav-item dropdown">
               <button class="btn btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class='bx bx-menu' style='color:#ffffff;'></i>
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="forms/logout.php"><i class='bx bx-log-in'> LogIn</i></a></li>
                 <li><a class="dropdown-item" href="forms/logout.php"><i class='bx bx-log-out'> LogOut</i></a></li>
               </ul>
             </li>
@@ -110,64 +117,62 @@
             
         
 <!-- end -->
+<?php
+// fetching data
+include '../forms/koneksi.php';
+$id = $_GET['ID_anggota'];
+$stmt = $koneksi->prepare("SELECT * FROM anggota WHERE ID_anggota = ?");
+$stmt->bind_param("s", $id);
+$stmt->execute();
+$result = $stmt->get_result();
+while($d = $result->fetch_object()) {
+?>
         <div class="col-sm-12 col-md-9">
             <div class="container shadow-box">
-            
-            <div class="container">
-  <div class="row g-3 align-items-center">
-    <div class="col-auto">
-      <label for="ID" class="col-form-label">ID</label>
-    </div>
-    <div class="col-auto">
-      <input id="ID" class="form-control">
-    </div>
-  </div>
-
-  <div class="row g-3 align-items-center">
-    <div class="col-auto">
-      <label for="nama" class="col-form-label">Nama</label>
-    </div>
-    <div class="col-auto">
-      <input id="nama" class="form-control">
-    </div>
-  </div>
-
-  <div class="row g-3 align-items-center">
-    <div class="col-auto">
-      <label for="email" class="col-form-label">Email</label>
-    </div>
-    <div class="col-auto">
-      <input type="email" id="email" class="form-control">
-    </div>
-  </div>
-
-  <div class="row g-3 align-items-center">
-    <div class="col-auto">
-      <label for="notelp" class="col-form-label">No Telepon</label>
-    </div>
-    <div class="col-auto">
-      <input id="notelp" class="form-control">
-    </div>
-  </div>
-
-  <div class="row g-3 align-items-center">
-    <div class="col-auto">
-      <label for="alamat" class="col-form-label">Alamat</label>
-    </div>
-    <div class="col-auto">
-      <input id="alamat" class="form-control">
-    </div>
-  </div>
-</div>
-                <div style="display: flex; justify-content: center;">
-                <a class="btn btn-primary " href="#" role="button" >Konfirmasi</a>
+                <div class="mb-3 row">
+                    <label for="idanggota" class="col-sm-2 col-form-label">ID</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="idanggota" value="<?= $d->ID_anggota; ?>">
                     </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">NAMA</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="staticEmail" value="<?= $d->Nama_anggota; ?>">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">EMAIL</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="staticEmail" value="<?= $d->Email; ?>">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">NO TELEPON</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="staticEmail" value="<?= $d->No_telp; ?>">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">ALAMAT</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="staticEmail" value="<?= $d->Alamat; ?>">
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <a class="btn btn-primary " href="#" role="button">Konfirmasi</a>
+                </div>
                 <div style="display: flex; justify-content: center;" id="btn2">
-                    <a class="btn btn-primary " href="#" role="button">Kembali</a>
+                    <a class="btn btn-primary " href="profile.php" role="button">Kembali</a>
                 </div>
             </div>
+            <?php } ?>
         </div>
-        </div>
+
+        
+      </div>
+      </div>
+      </div>
     </div>
 </section>
   </body>

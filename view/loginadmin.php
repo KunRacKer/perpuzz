@@ -17,7 +17,7 @@
 <body>
 <div class="wrapper">
       <div class="title-text">
-        <div class="title login">Admin Login Form</div>
+        <div class="title login">Login As Admin</div>
       </div>
       <div class="form-container">
         <div class="form-inner">
@@ -33,7 +33,6 @@
               <div class="btn-layer"></div>
               <input type="submit" value="Login">
             </div>
-            <div class="signup-link">Not a member? <a href="">Signup now</a></div>
           </form>
         </div>
       </div>

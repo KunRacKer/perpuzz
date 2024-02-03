@@ -1,3 +1,6 @@
+<?php
+  session_start(); // Start a session
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,8 +159,7 @@ input:placeholder-shown {
                 <i class='bx bx-menu' style='color:#ffffff;'></i>
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="forms/logout.php"><i class='bx bx-log-in'> LogIn</i></a></li>
-                <li><a class="dropdown-item" href="forms/logout.php"><i class='bx bx-log-out'> LogOut</i></a></li>
+                <li><a class="dropdown-item" href="../forms/logout.php"><i class='bx bx-log-out'> LogOut</i></a></li>
               </ul>
             </li>
             </ul>

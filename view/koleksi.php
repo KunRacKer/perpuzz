@@ -1,16 +1,5 @@
 <?php
   session_start(); // Start a session
-
-  if (!isset($_SESSION['Email'])) {
-      header("Location: view/login.php");
-      exit(); // Stop further execution of the page
-  }
-  if (!empty($_SESSION['ID_anggota'])) {
-      $role = 1;
-  }
-  elseif (!empty($_SESSION['ID_petugas'])) {
-      $role = 2;
-  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -77,8 +66,7 @@
                 <i class='bx bx-menu' style='color:#ffffff;'></i>
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="forms/logout.php"><i class='bx bx-log-in'> LogIn</i></a></li>
-                <li><a class="dropdown-item" href="forms/logout.php"><i class='bx bx-log-out'> LogOut</i></a></li>
+                <li><a class="dropdown-item" href="../forms/logout.php"><i class='bx bx-log-out'> LogOut</i></a></li>
               </ul>
             </li>
             </ul>
