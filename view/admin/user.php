@@ -190,7 +190,12 @@
 
                 </nav>
                 <!-- End of Topbar -->
-
+<?php
+// fetching data
+include '../../forms/koneksi.php';
+$query = "SELECT * FROM anggota ORDER BY Nama_anggota ASC";
+$result = mysqli_query($koneksi, $query);
+?>
                 <h1 class="m-5 text-dark">User</h1>
                 <br>
                 <section class="content">
@@ -210,19 +215,20 @@
                                                 <th>Email</th>
                                                 <th>No_telepon</th>
                                                 <th>Alamat</th>
-                                                <th colspan="2"><center>Aksi</center> </th>
-                                             
+                                                <th><center>Aksi</center> </th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td> 4</td>
-                                            <td>5</td>
-                                            <td> <button class="btn btn-primary" type="button"><a href="#" style="color: white">Ubah</a></button></td>
-                                            <td> <button class="btn btn-primary" type="button"><a href="#" style="color: white">Hapus</a></button></td>
-                                        
+                                        <?php while ($d = mysqli_fetch_object($result)) { ?>
+                                        <tr>
+                                            <td><?= $d->ID_anggota; ?></td>
+                                            <td><?= $d->Nama_anggota; ?></td>
+                                            <td><?= $d->Email; ?></td>
+                                            <td><?= $d->No_telp; ?></td>
+                                            <td><?= $d->Alamat; ?></td>
+                                            <td><button class="btn btn-primary" type="button"><a href="../../forms/admin/hapususer.php?ID_anggota=<?= $d->ID_anggota; ?>" style="color: white">Hapus</a></button></td>
+                                        </tr>
+                                        <?php } ?>
                                         </tbody>
                                         <tfoot>
                                             <tr>
@@ -231,7 +237,7 @@
                                                 <th>Email</th>
                                                 <th>No_telepon</th>
                                                 <th>Alamat</th>
-                                                <th colspan="2"><center>Aksi</center> </th>
+                                                <th><center>Aksi</center> </th>
                                             </tr>
                                         </tfoot>
                                     </table>

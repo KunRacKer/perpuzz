@@ -1,3 +1,6 @@
+<?php
+  session_start(); // Start a session
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -189,7 +192,12 @@
 
                 </nav>
                 <!-- End of Topbar -->
-
+<?php
+// fetching data
+include '../../forms/koneksi.php';
+$query = "SELECT * FROM mendata ORDER BY Tgl_pinjam ASC";
+$result = mysqli_query($koneksi, $query);
+?>
                 <h1 class="m-5 text-dark">Mendata</h1>
                 <br>
                 <section class="content">
@@ -214,15 +222,18 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td> 4</td>
-                                            <td> 4</td>
-                                            <td> 4</td>
-                                            <td> <button class="btn btn-primary" type="button"><a href="#" style="color: white">Ubah</a></button></td>
-                                            <td> <button class="btn btn-primary" type="button"><a href="#" style="color: white">Selesai</a></button></td>
-                                        
+                                        <?php while ($d = mysqli_fetch_object($result)) { ?>
+                                        <tr>
+                                            <td><?= $d->No_pinjam; ?></td>
+                                            <td><?= $d->ID_anggota; ?></td>
+                                            <td><?= $d->ID_petugas; ?></td>
+                                            <td><?= $d->ISBN_ISSN; ?></td>
+                                            <td><?= $d->Tgl_pinjam; ?></td>
+                                            <td><?= $d->Tgl_kembali; ?></td>
+                                            <td><button class="btn btn-primary" type="button"><a href="#" style="color: white">Ubah</a></button></td>
+                                            <td><button class="btn btn-primary" type="button"><a href="#" style="color: white">Selesai</a></button></td>
+                                        </tr>
+                                        <?php } ?>
                                         </tbody>
                                         <tfoot>
                                         <tr>

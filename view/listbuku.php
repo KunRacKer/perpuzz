@@ -105,7 +105,7 @@
 // fetching data
 include '../forms/koneksi.php';
 $id = $_SESSION['ID_anggota'];
-$query = "SELECT mendata.ISBN_ISSN, DATE_FORMAT(mendata.Tgl_pinjam, '%d %M %Y') AS Tgl_pinjam, DATE_FORMAT(mendata.Tgl_kembali, '%d %M %Y') AS Tgl_kembali, DATE_FORMAT(mendata.Tgl_kembali, '%Y-%m-%d') AS Tgl_kembali_asli, mendata.ID_anggota, mendata.No_pinjam, buku.Judul, buku.Pengarang, buku.Penerbit, buku.Edisi, buku.Gambar, petugas.Nama_petugas FROM buku JOIN mendata ON buku.ISBN_ISSN = mendata.ISBN_ISSN JOIN petugas ON petugas.ID_petugas = mendata.ID_petugas WHERE mendata.ID_anggota = $id ORDER BY buku.Judul ASC";
+$query = "SELECT mendata.ISBN_ISSN, DATE_FORMAT(mendata.Tgl_pinjam, '%d %M %Y') AS Tgl_pinjam, DATE_FORMAT(mendata.Tgl_kembali, '%d %M %Y') AS Tgl_kembali, mendata.ID_anggota, mendata.No_pinjam, buku.Judul, buku.Pengarang, buku.Penerbit, buku.Edisi, buku.Gambar, petugas.Nama_petugas FROM buku JOIN mendata ON buku.ISBN_ISSN = mendata.ISBN_ISSN JOIN petugas ON petugas.ID_petugas = mendata.ID_petugas WHERE mendata.ID_anggota = $id ORDER BY buku.Judul ASC";
 $result = mysqli_query($koneksi, $query);
 ?>
     <!-- End Section -->
@@ -123,10 +123,10 @@ $result = mysqli_query($koneksi, $query);
             </div>
             <div class="col-md-4">
                 <div style="display: flex; justify-content:end;">
-                    <a class="btn btn-primary" href="../forms/bukukembali.php?ISBN_ISSN=<?= $d->ISBN_ISSN; ?>&ID_anggota=<?= $d->ID_anggota; ?>" role="button">Kembalikan</a>
+                    <a class="btn btn-primary" href="../forms/bukukembali.php?No_pinjam=<?= $d->No_pinjam; ?>" role="button">Kembalikan</a>
                 </div>
                 <div style="display: flex; justify-content:end;">
-                    <a class="btn btn-primary" href="../forms/perpanjang.php?ISBN_ISSN=<?= $d->ISBN_ISSN; ?>&No_pinjam=<?= $d->No_pinjam; ?>&Tgl_kembali=<?= $d->Tgl_kembali_asli; ?>" role="button" id="btn">Perpanjang</a>
+                    <a class="btn btn-primary" href="../forms/perpanjang.php?ISBN_ISSN=<?= $d->ISBN_ISSN; ?>&No_pinjam=<?= $d->No_pinjam; ?>" role="button" id="btn">Perpanjang</a>
                 </div>
                 <div style="display: flex; justify-content:end; padding-top: 60px;">
                     <p class="float-center">PIC: <?= $d->Nama_petugas; ?></p>

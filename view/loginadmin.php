@@ -21,7 +21,7 @@
       </div>
       <div class="form-container">
         <div class="form-inner">
-          <form action="../forms/loginproses.php" method="post" class="login">
+          <form action="../forms/admin/loginproses.php" method="post" class="login">
             <div class="field">
               <input type="text" placeholder="Email Address" name="Email" required>
             </div>

@@ -1,3 +1,6 @@
+<?php
+  session_start(); // Start a session
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -189,7 +192,12 @@
                     </ul>
                 </nav>
                 <!-- End of Topbar -->
-
+<?php
+// fetching data
+include '../../forms/koneksi.php';
+$query = "SELECT * FROM buku ORDER BY Judul ASC";
+$result = mysqli_query($koneksi, $query);
+?>
                 <h1 class="m-5 text-dark">Buku</h1>
                 <br>
                 <div class="container-fluid">
@@ -222,19 +230,23 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td> 4</td>
-                                            <td>5</td>
-                                            <td>6</td>
-                                            <td>7</td>
-                                            <td>8</td>
-                                            <td>9</td>
-                                            <td>0</td>
-                                            <td>0</td>
+                                        <?php while ($d = mysqli_fetch_object($result)) { ?>
+                                            <tr>
+                                            <td><?= $d->ISBN_ISSN; ?></td>
+                                            <td><?= $d->Judul; ?></td>
+                                            <td><?= $d->Pengarang; ?></td>
+                                            <td><?= $d->Tipe_media; ?></td>
+                                            <td><?= $d->Penerbit; ?></td>
+                                            <td><?= $d->Jenis; ?></td>
+                                            <td><?= $d->Edisi; ?></td>
+                                            <td><?= $d->Tahun_terbit; ?></td>
+                                            <td><?= $d->Subjek; ?></td>
+                                            <td><?= $d->Jumlah; ?></td>
+                                            <td><?= $d->Gambar; ?></td>
                                             <td> <button class="btn btn-primary" type="button"><a href="#" style="color: white">Ubah</a></button></td>
                                             <td> <button class="btn btn-primary" type="button"><a href="#" style="color: white">Hapus</a></button></td>
+                                        </tr>
+                                            <?php } ?>
                                         </tbody>
                                         <tfoot>
                                             <tr>

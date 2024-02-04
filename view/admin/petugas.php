@@ -1,3 +1,6 @@
+<?php
+  session_start(); // Start a session
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -202,6 +205,12 @@
                                     <h3 class="card-title">Data Petugas</h3>
                                 </div>
                                 <!-- /.card-header -->
+<?php
+// fetching data
+include '../../forms/koneksi.php';
+$query = "SELECT * FROM petugas ORDER BY Nama_petugas ASC";
+$result = mysqli_query($koneksi, $query);
+?>
                                 <div class="card-body">
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead>
@@ -211,17 +220,19 @@
                                                 <th>Email</th>
                                                 <th>No_telepon</th>
                                                 <th colspan="2"><center>Aksi</center> </th>
-                                             
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td> 4</td>
-                                            <td> <button class="btn btn-primary" type="button"><a href="#" style="color: white">Ubah</a></button></td>
-                                            <td> <button class="btn btn-primary" type="button"><a href="#" style="color: white">Hapus</a></button></td>
-                                        
+                                        <?php while ($d = mysqli_fetch_object($result)) { ?>
+                                        <tr>
+                                            <td><?= $d->ID_petugas; ?></td>
+                                            <td><?= $d->Nama_petugas; ?></td>
+                                            <td><?= $d->Email; ?></td>
+                                            <td><?= $d->No_telp; ?></td>
+                                            <td><button class="btn btn-primary" type="button"><a href="#" style="color: white">Ubah</a></button></td>
+                                            <td><button class="btn btn-primary" type="button"><a href="#" style="color: white">Hapus</a></button></td>
+                                        </tr>
+                                        <?php } ?>
                                         </tbody>
                                         <tfoot>
                                             <tr>
