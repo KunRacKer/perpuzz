@@ -89,7 +89,7 @@
                 <i class='bx bx-menu' style='color:#ffffff;'></i>
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="forms/logout.php"><i class='bx bx-log-out'> LogOut</i></a></li>
+                <li><a class="dropdown-item" href="../forms/logout.php"><i class='bx bx-log-out'> LogOut</i></a></li>
               </ul>
             </li>
             </ul>
@@ -164,7 +164,7 @@ while($d = $result->fetch_object()) {
                     <a class="btn btn-primary " href="profileubah.php?ID_anggota=<?= $d->ID_anggota; ?>" role="button" >Edit</a>
                 </div>
                 <div style="display: flex; justify-content: center;" id="btn2">
-                    <a class="btn btn-primary " href="#" role="button">List Buku Yang Dipinjam</a>
+                    <a class="btn btn-primary " href="listbuku.php" role="button">List Buku Yang Dipinjam</a>
                 </div>
             </div>
             <?php } ?>

@@ -83,9 +83,9 @@ $stmt = $koneksi->prepare("SELECT * FROM buku WHERE ISBN_ISSN = ?");
 $stmt->bind_param("s", $id);
 $stmt->execute();
 $result = $stmt->get_result();
+$result1 = mysqli_query($koneksi, "SELECT * FROM petugas");
 while($d = $result->fetch_object()) {
 ?>
-
         <div class="container-xxl position-absolute text-center pt-3" data-aos="fade-up" data-aos-delay="100">
           <div class="position-relative">
             <div class="row text-center">
@@ -129,10 +129,24 @@ while($d = $result->fetch_object()) {
                       <td class="text-right" style="vertical-align:top;">ISBN/ISSN :</td>
                       <td><span><?= $d->ISBN_ISSN; ?></span></td>
                     </tr>
+                    <tr>
+                      <td class="text-right" style="vertical-align:top;" colspan="2">
+                      <br>
+                      <div class="dropdown">
+                        <a class="btn btn-primary col-md-6" type="button" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pinjam</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <?php while($d1 = mysqli_fetch_object($result1)) { ?>
+                            <li><a class="dropdown-item" href="../forms/user_tambahbuku.php?ISBN_ISSN=<?= $d->ISBN_ISSN; ?>&ID_petugas=<?= $d1->ID_petugas; ?>"><?= $d1->Nama_petugas; ?></a></li>
+                            <?php } ?>
+                            <li><a class="dropdown-item" href=""  onclick="return false;">Pilih Petugas</a></li>
+                          </ul>
+                      </div>
+                      <br>
+                      </td>
+                    </tr>
                   </tbody>
                   <?php } ?>
                 </table>
-                    <a href="tambahbuku.php"><button type="button" class="btn btn-primary mx-3 mb-3 col-md-5">Pinjam</button></a>
               </div>
               <div class="container text-left" data-aos="fade-up" data-aos-delay="100"> <div class="row"><div class="col-md-6 d-flex justify-content-start"><a href="katalog.php" class="text-dark"><h4><< Katalog</h4></a></div> <div class="col-md-6 d-flex justify-content-end"><a href="koleksi.php" class="text-dark"><h4>Koleksi >></h4></a></div></div> </div>
             </div>

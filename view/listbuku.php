@@ -1,3 +1,6 @@
+<?php
+  session_start(); // Start a session
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +46,7 @@
 
   <!-- style -->
   <style>
-.scrollable-div {
+    .scrollable-div {
     min-height: 400px;
     overflow-y: scroll;}
 
@@ -64,10 +67,7 @@
 
   <body>
     <!-- ======= Header ======= -->
-    <header
-      id="header"
-      class="fixed-top d-flex align-items-center header-profile"
-    >
+    <header id="header" class="fixed-top d-flex align-items-center header-profile">
       <div class="container d-flex justify-content-between align-items-center">
         <div id="logo">
           <a href="index.php"><img src="../assets/img/logo.png" alt="" /></a>
@@ -84,7 +84,7 @@
                 <i class='bx bx-menu' style='color:#ffffff;'></i>
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="forms/logout.php"><i class='bx bx-log-out'> LogOut</i></a></li>
+                <li><a class="dropdown-item" href="../forms/logout.php"><i class='bx bx-log-out'> LogOut</i></a></li>
               </ul>
             </li>
             </ul>
@@ -101,68 +101,43 @@
         <center><h1>List Buku</h1></center>
       </div>
 
+<?php
+// fetching data
+include '../forms/koneksi.php';
+$id = $_SESSION['ID_anggota'];
+$query = "SELECT mendata.ISBN_ISSN, DATE_FORMAT(mendata.Tgl_pinjam, '%d %M %Y') AS Tgl_pinjam, DATE_FORMAT(mendata.Tgl_kembali, '%d %M %Y') AS Tgl_kembali, DATE_FORMAT(mendata.Tgl_kembali, '%Y-%m-%d') AS Tgl_kembali_asli, mendata.ID_anggota, mendata.No_pinjam, buku.Judul, buku.Pengarang, buku.Penerbit, buku.Edisi, buku.Gambar, petugas.Nama_petugas FROM buku JOIN mendata ON buku.ISBN_ISSN = mendata.ISBN_ISSN JOIN petugas ON petugas.ID_petugas = mendata.ID_petugas WHERE mendata.ID_anggota = $id ORDER BY buku.Judul ASC";
+$result = mysqli_query($koneksi, $query);
+?>
     <!-- End Section -->
-    <div class="container shadow-box mt-5">
+    <div class="container mt-5">
         <div class="row">
+        <?php while ($d = mysqli_fetch_object($result)) { ?>
+          <div class="mb-4"><hr></div>
             <div class="col-md-4">
-                <img src="../assets/img/sampul/gmbr (1).jpeg" style="width: 120px; height: 170px;" alt="Image">
+                <img src="../assets/img/sampul/<?= $d->Gambar; ?>" style="width: 170px;" class="shadow-box" alt="Image">
             </div>
             <div class="col-md-4">
-                <p class="float-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum pariatur dignissimos quod sint nam rem quas nemo nesciunt voluptatibus cupiditate.</p>
+                <p class="float-right"><?= $d->Judul; ?></p>
+                <p class="float-right"><?= $d->Pengarang; ?>, <br> Penerbit: <?= $d->Penerbit; ?>, Edisi: <?= $d->Edisi; ?></p>
+                <p class="float-right">Pinjam: <?= $d->Tgl_pinjam; ?> <br>Kembalikan: <?= $d->Tgl_kembali; ?></p>
             </div>
             <div class="col-md-4">
-                <div style="display: flex; justify-content:center;">
-                    <a class="btn btn-primary" href="#" role="button">Kembalikan</a>
+                <div style="display: flex; justify-content:end;">
+                    <a class="btn btn-primary" href="../forms/bukukembali.php?ISBN_ISSN=<?= $d->ISBN_ISSN; ?>&ID_anggota=<?= $d->ID_anggota; ?>" role="button">Kembalikan</a>
                 </div>
-                <div style="display: flex; justify-content:center;">
-                    <a class="btn btn-primary" href="#" role="button" id="btn">Perpanjang</a>
+                <div style="display: flex; justify-content:end;">
+                    <a class="btn btn-primary" href="../forms/perpanjang.php?ISBN_ISSN=<?= $d->ISBN_ISSN; ?>&No_pinjam=<?= $d->No_pinjam; ?>&Tgl_kembali=<?= $d->Tgl_kembali_asli; ?>" role="button" id="btn">Perpanjang</a>
+                </div>
+                <div style="display: flex; justify-content:end; padding-top: 60px;">
+                    <p class="float-center">PIC: <?= $d->Nama_petugas; ?></p>
                 </div>
             </div>
-            
+          <?php } ?>
         </div>
     </div>
 
-    <div class="container shadow-box mt-5">
-        <div class="row">
-            <div class="col-md-4">
-                <img src="../assets/img/sampul/gmbr (2).jpg" style="width: 120px; height: 170px;" alt="Image">
-            </div>
-            <div class="col-md-4">
-                <p class="float-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum pariatur dignissimos quod sint nam rem quas nemo nesciunt voluptatibus cupiditate.</p>
-            </div>
-            <div class="col-md-4">
-                <div style="display: flex; justify-content:center;">
-                    <a class="btn btn-primary" href="#" role="button">Kembalikan</a>
-                </div>
-                <div style="display: flex; justify-content:center;">
-                    <a class="btn btn-primary" href="#" role="button" id="btn">Perpanjang</a>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-
-    <div class="container shadow-box mt-5">
-        <div class="row">
-            <div class="col-md-4">
-                <img src="../assets/img/sampul/gmbr (3).jpg" style="width: 120px; height: 170px;" alt="Image">
-            </div>
-            <div class="col-md-4">
-                <p class="float-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum pariatur dignissimos quod sint nam rem quas nemo nesciunt voluptatibus cupiditate.</p>
-            </div>
-            <div class="col-md-4">
-                <div style="display: flex; justify-content:center;">
-                    <a class="btn btn-primary" href="#" role="button">Kembalikan</a>
-                </div>
-                <div style="display: flex; justify-content:center;">
-                    <a class="btn btn-primary" href="#" role="button" id="btn">Perpanjang</a>
-                </div>
-            </div>
-            
-        </div>
-    </div>
     <div style="display: flex; justify-content:center;">
-        <a class="btn btn-primary" href="#" role="button" id="btn">Kembali</a>
+        <a class="btn btn-primary" href="profile.php" role="button" id="btn">Kembali</a>
     </div>
     </section>
   </body>

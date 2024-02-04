@@ -12,7 +12,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Name = $_POST['Name'];
     $password = md5($_POST['password']);
 
-    // Perintah SQL INSERT
     $rand = rand(1000,9999);
 
     // Membuat prepared statement
