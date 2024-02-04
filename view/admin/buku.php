@@ -183,7 +183,7 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="../../forms/logout.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -244,7 +244,7 @@ $result = mysqli_query($koneksi, $query);
                                             <td><?= $d->Jumlah; ?></td>
                                             <td><?= $d->Gambar; ?></td>
                                             <td> <button class="btn btn-primary" type="button"><a href="#" style="color: white">Ubah</a></button></td>
-                                            <td> <button class="btn btn-primary" type="button"><a href="#" style="color: white">Hapus</a></button></td>
+                                            <td> <button class="btn btn-primary" type="button"><a href="../../forms/admin/hapusbuku.php?ISBN_ISSN=<?= $d->ISBN_ISSN; ?>" style="color: white">Hapus</a></button></td>
                                         </tr>
                                             <?php } ?>
                                         </tbody>

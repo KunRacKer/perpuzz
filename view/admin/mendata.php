@@ -181,7 +181,7 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="../../forms/logout.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -231,7 +231,7 @@ $result = mysqli_query($koneksi, $query);
                                             <td><?= $d->Tgl_pinjam; ?></td>
                                             <td><?= $d->Tgl_kembali; ?></td>
                                             <td><button class="btn btn-primary" type="button"><a href="#" style="color: white">Ubah</a></button></td>
-                                            <td><button class="btn btn-primary" type="button"><a href="#" style="color: white">Selesai</a></button></td>
+                                            <td><button class="btn btn-primary" type="button"><a href="../../forms/admin/selesaipinjam.php?No_pinjam=<?= $d->No_pinjam; ?>" style="color: white">Selesai</a></button></td>
                                         </tr>
                                         <?php } ?>
                                         </tbody>

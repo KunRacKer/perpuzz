@@ -182,7 +182,7 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="../../forms/logout.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -198,23 +198,23 @@
                 <div class="card card-primary">
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form>
+                    <form action="../../forms/admin/tambahpetugas.php" method="POST">
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">ID Petugas</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan ID Petugas">
-                            </div>
-                            <div class="form-group">
                                 <label for="exampleInputEmail1">Nama</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama petugas">
+                                <input type="text" class="form-control" name="Name" id="exampleInputEmail1" placeholder="Masukkan Nama petugas">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Email Petugas">
+                                <input type="text" class="form-control" name="Email" id="exampleInputEmail1" placeholder="Masukkan Email Petugas">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">No. Telp</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan No. Telp Petugas">
+                                <input type="text" class="form-control" name="No_telp" id="exampleInputEmail1" placeholder="Masukkan No. Telp Petugas">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Password</label>
+                                <input type="password" class="form-control" name="password" id="exampleInputEmail1" placeholder="Masukkan No. Telp Petugas">
                             </div>
                         </div>
                         <!-- /.card-body -->

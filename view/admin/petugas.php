@@ -182,7 +182,7 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="../../forms/logout.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -208,7 +208,7 @@
 <?php
 // fetching data
 include '../../forms/koneksi.php';
-$query = "SELECT * FROM petugas ORDER BY Nama_petugas ASC";
+$query = "SELECT petugas.ID_petugas, petugas.Nama_petugas, petugas.Email, petugas.No_telp, user.password FROM petugas JOIN user ON petugas.ID_petugas = user.ID_petugas ORDER BY Nama_petugas ASC";
 $result = mysqli_query($koneksi, $query);
 ?>
                                 <div class="card-body">
@@ -219,6 +219,7 @@ $result = mysqli_query($koneksi, $query);
                                                 <th>Nama_Petugas</th>
                                                 <th>Email</th>
                                                 <th>No_telepon</th>
+                                                <th>Pass</th>
                                                 <th colspan="2"><center>Aksi</center> </th>
                                             </tr>
                                         </thead>
@@ -229,8 +230,9 @@ $result = mysqli_query($koneksi, $query);
                                             <td><?= $d->Nama_petugas; ?></td>
                                             <td><?= $d->Email; ?></td>
                                             <td><?= $d->No_telp; ?></td>
+                                            <td><?= $d->password; ?></td>
                                             <td><button class="btn btn-primary" type="button"><a href="#" style="color: white">Ubah</a></button></td>
-                                            <td><button class="btn btn-primary" type="button"><a href="#" style="color: white">Hapus</a></button></td>
+                                            <td><button class="btn btn-primary" type="button"><a href="../../forms/admin/hapuspetugas.php?ID_petugas=<?= $d->ID_petugas; ?>" style="color: white">Hapus</a></button></td>
                                         </tr>
                                         <?php } ?>
                                         </tbody>
@@ -240,6 +242,7 @@ $result = mysqli_query($koneksi, $query);
                                                 <th>Nama_Petugas</th>
                                                 <th>Email</th>
                                                 <th>No_telepon</th>
+                                                <th>Pass</th>
                                                 <th colspan="2"><center>Aksi</center> </th>
                                             </tr>
                                         </tfoot>
