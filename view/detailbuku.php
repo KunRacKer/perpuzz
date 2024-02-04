@@ -85,6 +85,8 @@ $stmt->execute();
 $result = $stmt->get_result();
 while($d = $result->fetch_object()) {
 ?>
+
+<div class="container text-left" data-aos="fade-up" data-aos-delay="100"> <a href="koleksi.php" class="text-dark"><h4><< Kembali</h4></a></div>
         <div class="container-xxl position-absolute text-center pt-3" data-aos="fade-up" data-aos-delay="100">
           <div class="position-relative">
             <div class="row text-center">

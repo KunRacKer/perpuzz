@@ -103,6 +103,9 @@
     <!-- ======= Section ======= -->
     <section id="profile">
       <div class="profile-container pt-5" >
+        <br>
+        <br>
+        <br>
         <center><h1>Profile</h1></center>
       </div>
 
