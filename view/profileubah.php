@@ -129,51 +129,56 @@ while($d = $result->fetch_object()) {
 ?>
         <div class="col-sm-12 col-md-9">
             <div class="container shadow-box">
+              <form action="../forms/updateprofil.php" method="POST">
                 <div class="mb-3 row">
                     <label for="idanggota" class="col-sm-2 col-form-label">ID</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="idanggota" value="<?= $d->ID_anggota; ?>">
+                        <input type="text" readonly class="form-control" name="ID_anggota" id="idanggota" value="<?= $d->ID_anggota; ?>">
                     </div>
                 </div>
                 <div class="mb-3 row">
                     <label for="staticEmail" class="col-sm-2 col-form-label">NAMA</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="staticEmail" value="<?= $d->Nama_anggota; ?>">
+                        <input type="text" class="form-control" name="Name" id="staticEmail" value="<?= $d->Nama_anggota; ?>">
                     </div>
                 </div>
                 <div class="mb-3 row">
                     <label for="staticEmail" class="col-sm-2 col-form-label">EMAIL</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="staticEmail" value="<?= $d->Email; ?>">
+                        <input type="text" class="form-control" name="Email" id="staticEmail" value="<?= $d->Email; ?>">
                     </div>
                 </div>
                 <div class="mb-3 row">
                     <label for="staticEmail" class="col-sm-2 col-form-label">NO TELEPON</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="staticEmail" value="<?= $d->No_telp; ?>">
+                        <input type="text" class="form-control" name="No_telp" id="staticEmail" value="<?= $d->No_telp; ?>">
                     </div>
                 </div>
                 <div class="mb-3 row">
                     <label for="staticEmail" class="col-sm-2 col-form-label">ALAMAT</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="staticEmail" value="<?= $d->Alamat; ?>">
+                        <input type="text" class="form-control" name="Alamat" id="staticEmail" value="<?= $d->Alamat; ?>">
                     </div>
                 </div>
                 <div style="display: flex; justify-content: center;">
-                    <a class="btn btn-primary " href="#" role="button">Konfirmasi</a>
+                    <button class="btn btn-primary" type="submit" >Konfirmasi</button>
                 </div>
                 <div style="display: flex; justify-content: center;" id="btn2">
                     <a class="btn btn-primary " href="profile.php" role="button">Kembali</a>
                 </div>
             </div>
             <?php } ?>
+          </form>
         </div>
-
-        
       </div>
       </div>
       </div>
     </div>
 </section>
   </body>
+  <script>
+    function konfirmasi() {
+      confirm("Yakin Ingin Memperbarui Data Profil?");
+    }
+  </script>
 </html>

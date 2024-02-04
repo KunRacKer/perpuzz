@@ -101,7 +101,6 @@ $result = mysqli_query($koneksi, $query);
                         <div class="card-body">
                             <h5 class="card-title"><?= $d->Judul; ?></h5>
                         </div>
-                        
                     </div>
                 </a></div>
                 <?php } ?>

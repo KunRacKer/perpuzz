@@ -86,7 +86,6 @@ $result = $stmt->get_result();
 while($d = $result->fetch_object()) {
 ?>
 
-<div class="container text-left" data-aos="fade-up" data-aos-delay="100"> <a href="koleksi.php" class="text-dark"><h4><< Kembali</h4></a></div>
         <div class="container-xxl position-absolute text-center pt-3" data-aos="fade-up" data-aos-delay="100">
           <div class="position-relative">
             <div class="row text-center">
@@ -94,6 +93,10 @@ while($d = $result->fetch_object()) {
               <div class="col-md-6 col-sm-12">
                 <table class="table table-condensed table-striped table-hover" width="100%">
                   <tbody>
+                    <tr>
+                      <td class="text-right" style="width:200px;vertical-align:top;">Judul :</td>
+                      <td><?= $d->Judul; ?></td>
+                    </tr>
                     <tr>
                       <td class="text-right" style="width:200px;vertical-align:top;">Pengarang :</td>
                       <td><?= $d->Pengarang; ?></td>
@@ -131,7 +134,7 @@ while($d = $result->fetch_object()) {
                 </table>
                     <a href="tambahbuku.php"><button type="button" class="btn btn-primary mx-3 mb-3 col-md-5">Pinjam</button></a>
               </div>
-              
+              <div class="container text-left" data-aos="fade-up" data-aos-delay="100"> <div class="row"><div class="col-md-6 d-flex justify-content-start"><a href="katalog.php" class="text-dark"><h4><< Katalog</h4></a></div> <div class="col-md-6 d-flex justify-content-end"><a href="koleksi.php" class="text-dark"><h4>Koleksi >></h4></a></div></div> </div>
             </div>
           </div>
         </div>

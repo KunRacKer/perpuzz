@@ -139,10 +139,7 @@ input:placeholder-shown {
   </head>
   <body>
     <!-- ======= Header ======= -->
-    <header
-      id="header"
-      class="fixed-top d-flex align-items-center header-koleksi"
-    >
+    <header id="header" class="fixed-top d-flex align-items-center header-koleksi">
       <div class="container d-flex justify-content-between align-items-center">
         <div id="logo">
           <a href="../index.php"><img src="../assets/img/logo.png" alt="" /></a>
@@ -186,52 +183,52 @@ input:placeholder-shown {
           
           <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-lg-8">
-              <form class="card card-sm">
+              <form class="card card-sm" action="" method="GET">
                 <div class="card-body row no-gutters align-items-center">
                   <div class="col-auto">
                     <i class="fas fa-search h4 text-body"></i>
                   </div>
                   <!--end of col-->
                   <div class="col">
-                    <input
-                      class="form-control form-control-lg form-control-borderless"
-                      type="search"
-                      placeholder="Search Books or keywords"
-                    />
+                    <input class="form-control form-control-lg form-control-borderless" name="Judul" type="search" placeholder="Search Books Title"/>
                   </div>
                   <!--end of col-->
                   <div class="col-auto">
-                    <a href="#">
-                      <button class="btn btn-lg btn-success" type="submit">
-                        Search
-                      </button>
-                    </a>
+                      <button class="btn btn-lg btn-success" type="submit" name="search" value="search">Search</button>
                   </div>
                   <!--end of col-->
                 </div>
-                
-
               </form>
+
+
+
               <!-- Advance search-->
               <div class="container pb-5">
                 <br>
                 <h5><center>Advanced Search</center></h5>
-                <form class="row g-3">
-                  <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label">Judul</label>
-                    <input type="email" class="form-control" id="inputEmail4">
+                <form class="row g-3" action="" method="GET">
+                  <div class="col-md-3">
+                    <label for="input" class="form-label">Tahun Terbit(Dari)</label>
+                    <input type="number" name="Tahun1" class="form-control" min="1800" max="2024" step="1" value="2014">
+                  </div>
+                  <div class="col-md-3">
+                    <label for="input" class="form-label">Tahun Terbit(Sampai)</label>
+                    <input type="number" name="Tahun2" class="form-control" min="1800" max="2024" step="1" value="2024">
                   </div>
                   <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label">ISSN/ISBN</label>
-                    <input type="password" class="form-control" id="inputPassword4">
+                    <label for="input" class="form-label">ISSN/ISBN</label>
+                    <input type="text" name="ISBN_ISSN" class="form-control">
                   </div>
                   <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label">Pengarang</label>
-                    <input type="email" class="form-control" id="inputEmail4">
+                    <label for="input" class="form-label">Pengarang</label>
+                    <input type="text" name="Pengarang" class="form-control">
                   </div>
                   <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label">Penerbit</label>
-                    <input type="password" class="form-control" id="inputPassword4">
+                    <label for="input" class="form-label">Penerbit</label>
+                    <input type="text" name="Penerbit" class="form-control">
+                  </div>
+                  <div class="col-md-12">
+                      <button class="btn btn-lg btn-success" type="submit" name="search" value="search">Search</button>
                   </div>
                 </form>
                 <!-- end advance -->
@@ -244,6 +241,33 @@ input:placeholder-shown {
       <!-- End About Section -->
       
 
+      <?php
+include '../forms/koneksi.php';
+
+$Judul = isset($_GET['Judul']) ? $_GET['Judul'] : '';
+$Tahun1 = isset($_GET['Tahun1']) ? $_GET['Tahun1'] : '';
+$Tahun2 = isset($_GET['Tahun2']) ? $_GET['Tahun2'] : '';
+$ISBN_ISSN = isset($_GET['ISBN_ISSN']) ? $_GET['ISBN_ISSN'] : '';
+$Pengarang = isset($_GET['Pengarang']) ? $_GET['Pengarang'] : '';
+$Penerbit = isset($_GET['Penerbit']) ? $_GET['Penerbit'] : '';
+
+$sql = "SELECT * FROM buku WHERE Judul LIKE '%$Judul%'";
+
+if (!empty($Tahun1) && !empty($Tahun2)) {
+    $sql .= " AND (Tahun_terbit >= $Tahun1 AND Tahun_terbit <= $Tahun2)";
+}
+
+$sql .= " AND (ISBN_ISSN LIKE '%$ISBN_ISSN%' OR Pengarang LIKE '%$Pengarang%' OR Penerbit LIKE '%$Penerbit%')";
+
+$data = mysqli_query($koneksi, $sql);
+
+if (!$data) {
+    printf("Error: %s\n", mysqli_error($koneksi));
+    exit();
+}
+
+$result = $data
+?>
 
 <!-- Koleksi+widget -->
 <section id="koleksi">
@@ -251,106 +275,27 @@ input:placeholder-shown {
   <div class="container">
   
   <div class="row">
-  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-    <h1>Koleksi Terbaru</h1>
-    <hr>
-
-    <div class="scrollable-div row-gap-2" style="max-height:600px;overflow-y:scroll;">
-    <li class="list-group-item d-flex justify-content-between align-items-start">
-      <div class="ms-2 me-auto" style="font-size: 12px;">
-      <a href="#" class="list-group-item list-group-item-action" style="color: blue;">NIEBELS Methods, Standards, And Work Design</a>
-        Andris Freivalds, Benjamin W. Niebel
-      </div>
-    </li>
-    <li class="list-group-item d-flex justify-content-between align-items-start">
-      <div class="ms-2 me-auto" style="font-size: 12px;">
-      <a href="#" class="list-group-item list-group-item-action" style="color: blue;">STRATEGI Visual</a>
-      Andry Masri
-      </div>
-    </li>
-    <li class="list-group-item d-flex justify-content-between align-items-start">
-      <div class="ms-2 me-auto" style="font-size: 12px;">
-      <a href="#" class="list-group-item list-group-item-action" style="color: blue;">FIQH Muamalat: Sistem Transaksi Dalam Fiqh Islam</a>
-      Abdul Aziz Muhammad Azzam
-    </li>
-    <li class="list-group-item d-flex justify-content-between align-items-start">
-      <div class="ms-2 me-auto" style="font-size: 12px;">
-      <a href="#" class="list-group-item list-group-item-action" style="color: blue;">ANALISIS Data Dengan Statistika Nonparametrik</a>
-      Nar Herrhyanto, Tuti Gantini
-      </div>
-    </li>
-    <li class="list-group-item d-flex justify-content-between align-items-start">
-      <div class="ms-2 me-auto" style="font-size: 12px;">
-      <a href="#" class="list-group-item list-group-item-action" style="color: blue;">Nar Herrhyanto, Tuti Gantini</a>
-      Tere Liye
-      </div>
-    </li>
-    <li class="list-group-item d-flex justify-content-between align-items-start">
-      <div class="ms-2 me-auto" style="font-size: 12px;">
-      <a href="#" class="list-group-item list-group-item-action" style="color: blue;">GEOGRAFI Kota dan Desa</a>
-      N. Daldjoeni
-      </div>
-    </li>
-    
-    </div>
-  </div>
-  
-
-
-  <!-- end -->
-
-  <!-- koleksi 2-->
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 " style="font-size: medium;">
-      <div class="tg-widget tg-widgetdownload" style="padding:20px;background-color:#fff;">
-        <div class="container" style="background-color: #F4F5F1 ;">
-          <h3>Koleksi</h3>
-			  </div>
-        <div class="" style="padding:0px 10px;">
-        <ul>
-	        <li><a href="#">Buku</a><span class="pull-right"> # judul, # eksemplar.</span></li>
-          <li><a href="#">Audio Visual</a><span class="pull-right"># judul, # eksemplar.</span></li>
-          <li><a href="#">Berkala / Serial</a><span class="pull-right"># judul, # eksemplar.</span></li>
-        </ul>
+      <div class="col-md-12">
+        <h1>Koleksi Terbaru</h1>
+        <hr>
+          <div class="scrollable-div row-gap-2" style="max-height:600px;overflow-y:scroll;">
+            <div class="row">
+              <?php while ($d = mysqli_fetch_object($result)) { ?>
+              <div class="col-sm-12 col-md-6">
+                <div class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto" style="font-size: 12px;">
+                    <a href="detailbuku.php?ISBN_ISSN=<?= $d->ISBN_ISSN; ?>" class="list-group-item list-group-item-action" style="color: blue;"><?= $d->Judul; ?></a>
+                    <?= $d->Pengarang; ?>, Penerbit: <?= $d->Penerbit; ?>, Edisi: <?= $d->Edisi; ?>
+                  </div>
+                </div>
+              </div>
+              <?php } ?>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div class="tg-widget tg-widgetdownload" style="padding:20px;background-color:#fff;">
-        <div class="tg-widgettitle" style="background-color: #F4F5F1 ;">
-				  <h3>Grup Jenis Media</h3>
-			  </div>
-        <div class="" style="padding:0px 10px;">
-      <ul>
-	      <li><a href="#">Art Original</a> <span class="pull-right"># judul , # eksemplar.</span></li>
-        <li><a href="#">CD-ROM</a> <span class="pull-right"># judul , # eksemplar.</span></li>
-        <li><a href="#">Diskete</a> <span class="pull-right"># judul , # eksemplar.</span></li>
-        <li><a href="#">Electronic Resource</a> <span class="pull-right"># judul , # eksemplar.</span></li>
-        <li><a href="#">KASSETE</a> <span class="pull-right"># judul , # eksemplar.</span></li>
-        <li><a href="#">Text book</a> <span class="pull-right"># judul , # eksemplar.</span></li>
-      </ul>
-        </div>
-      </div>
-
-      <div class="tg-widget tg-widgetdownload" style="padding:20px;background-color:#fff;">
-        <div class="tg-widgettitle" style="background-color: #F4F5F1 ;">
-				  <h3>Grup Jenis Serial</h3>
-			  </div>
-        <div class="" style="padding:0px 10px;">
-        <ul>
-	        <li><a href="#">Buletin</a> <span class="pull-right"># judul , # eksemplar.</span></li>
-          <li><a href="#">Jurnal</a> <span class="pull-right"># judul , # eksemplar.</span></li>
-          <li><a href="#">Kliping</a> <span class="pull-right"># judul , # eksemplar.</span></li>
-          <li><a href="#">Koran</a> <span class="pull-right"># judul , # eksemplar.</span></li>
-          <li><a href="#">Laporan Kegiatan</a> <span class="pull-right"># judul , # eksemplar.</span></li>
-          <li><a href="#">Majalah</a> <span class="pull-right"># judul , # eksemplar.</span></li>
-          <li><a href="#">Prosiding</a> <span class="pull-right"># judul , # eksemplar.</span></li>
-          <li><a href="#">Tabloid</a> <span class="pull-right"># judul , # eksemplar.</span></li>
-        </ul>
-        </div>
-      </div>
+      <!-- end -->
     </div>
-    </div>
-    </div>
-    </section>
+  </section>
   
   </body>
 </html>
