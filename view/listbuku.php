@@ -1,12 +1,3 @@
-<?php
-  session_start(); // Start a session
-
-  if (!isset($_SESSION['Email'])) {
-      header("Location: login.php");
-      exit(); // Stop further execution of the page
-  }
-  $Email = $_SESSION['Email'];
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,10 +51,14 @@
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           padding: 20px;
       }
+      
+      #btn{
+        margin-top: 3rem;
+      }
 
-    #btn2{
-        padding-top: 1rem;
-    }
+      .btn{
+        size: 130%;
+      }
   </style>
   <!-- end -->
 
@@ -101,73 +96,71 @@
     <!-- End Header -->
 
     <!-- ======= Section ======= -->
-    <section id="profile">
+    <section id="koleksi">
       <div class="profile-container pt-5" >
-        <center><h1>Profile</h1></center>
+        <center><h1>List Buku</h1></center>
       </div>
 
     <!-- End Section -->
-
-<!-- foto profile-->
-
-    <div class="container shadow-box">
+    <div class="container shadow-box mt-5">
         <div class="row">
-            <div class="col-sm-12 col-md-3 text-center" id="icon" style="justify-content: center;">
-                <img src="../assets/img/icon.jpg" alt="icon" width="150" class="rounded-circle border border-primary-subtle">
+            <div class="col-md-4">
+                <img src="../assets/img/sampul/gmbr (1).jpeg" style="width: 120px; height: 170px;" alt="Image">
             </div>
-<!-- end -->
-<?php
-// fetching data
-include '../forms/koneksi.php';
-$stmt = $koneksi->prepare("SELECT * FROM anggota WHERE Email = ?");
-$stmt->bind_param("s", $Email);
-$stmt->execute();
-$result = $stmt->get_result();
-while($d = $result->fetch_object()) {
-?>
-        <div class="col-sm-12 col-md-9">
-            <div class="container shadow-box">
-                <div class="mb-3 row">
-                    <label for="idanggota" class="col-sm-2 col-form-label">ID</label>
-                    <div class="col-sm-10">
-                        <input type="text" readonly class="form-control-plaintext" id="idanggota" value="<?= $d->ID_anggota; ?>">
-                    </div>
+            <div class="col-md-4">
+                <p class="float-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum pariatur dignissimos quod sint nam rem quas nemo nesciunt voluptatibus cupiditate.</p>
+            </div>
+            <div class="col-md-4">
+                <div style="display: flex; justify-content:center;">
+                    <a class="btn btn-primary" href="#" role="button">Kembalikan</a>
                 </div>
-                <div class="mb-3 row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">NAMA</label>
-                    <div class="col-sm-10">
-                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $d->Nama_anggota; ?>">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">EMAIL</label>
-                    <div class="col-sm-10">
-                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $d->Email; ?>">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">NO TELEPON</label>
-                    <div class="col-sm-10">
-                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $d->No_telp; ?>">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">ALAMAT</label>
-                    <div class="col-sm-10">
-                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $d->Alamat; ?>">
-                    </div>
-                </div>
-                <div style="display: flex; justify-content: center;">
-                    <a class="btn btn-primary " href="profileubah.php?ID_anggota=<?= $d->ID_anggota; ?>" role="button" >Edit</a>
-                </div>
-                <div style="display: flex; justify-content: center;" id="btn2">
-                    <a class="btn btn-primary " href="#" role="button">List Buku Yang Dipinjam</a>
+                <div style="display: flex; justify-content:center;">
+                    <a class="btn btn-primary" href="#" role="button" id="btn">Perpanjang</a>
                 </div>
             </div>
-            <?php } ?>
+            
         </div>
-      </div>
     </div>
-</section>
+
+    <div class="container shadow-box mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="../assets/img/sampul/gmbr (2).jpg" style="width: 120px; height: 170px;" alt="Image">
+            </div>
+            <div class="col-md-4">
+                <p class="float-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum pariatur dignissimos quod sint nam rem quas nemo nesciunt voluptatibus cupiditate.</p>
+            </div>
+            <div class="col-md-4">
+                <div style="display: flex; justify-content:center;">
+                    <a class="btn btn-primary" href="#" role="button">Kembalikan</a>
+                </div>
+                <div style="display: flex; justify-content:center;">
+                    <a class="btn btn-primary" href="#" role="button" id="btn">Perpanjang</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="container shadow-box mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="../assets/img/sampul/gmbr (3).jpg" style="width: 120px; height: 170px;" alt="Image">
+            </div>
+            <div class="col-md-4">
+                <p class="float-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum pariatur dignissimos quod sint nam rem quas nemo nesciunt voluptatibus cupiditate.</p>
+            </div>
+            <div class="col-md-4">
+                <div style="display: flex; justify-content:center;">
+                    <a class="btn btn-primary" href="#" role="button">Kembalikan</a>
+                </div>
+                <div style="display: flex; justify-content:center;">
+                    <a class="btn btn-primary" href="#" role="button" id="btn">Perpanjang</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </section>
   </body>
 </html>
