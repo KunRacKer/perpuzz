@@ -213,7 +213,7 @@ while($d = $result->fetch_object()) {
                             <div class="form-group">
                                 <label for="exampleSelectRounded0">Tipe_Media</label>
                                 <select class="custom-select rounded-0" name="Tipe_media" id="exampleSelectRounded0">
-                                    <option value="<?= $d->Tipe_media; ?>" selected disable><?= $d->Tipe_media; ?></option>
+                                    <option value="<?= $d->Tipe_media; ?>">Pilihan Sebelumnya: <?= $d->Tipe_media; ?></option>
                                     <option value="Text Book">Text Book</option>
                                     <option value="E Book">E Book</option>
                                 </select>
@@ -225,7 +225,7 @@ while($d = $result->fetch_object()) {
                             <div class="form-group">
                                 <label for="exampleSelectRounded0">Jenis</label>
                                 <select class="custom-select rounded-0" name="Jenis" id="exampleSelectRounded0">
-                                    <option value="<?= $d->Jenis; ?>" selected disable><?= $d->Jenis; ?></option>
+                                    <option value="<?= $d->Jenis; ?>">Pilihan Sebelumnya: <?= $d->Jenis; ?></option>
                                     <option value="Buku">Buku</option>
                                     <option Value="Novel">Novel</option>
                                     <option Value="Majalah">Majalah</option>

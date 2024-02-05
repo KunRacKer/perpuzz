@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $sql = "INSERT INTO buku (ISBN_ISSN, Judul, Pengarang, Tipe_media, Penerbit, Jenis, Edisi, Tahun_terbit, Subjek, Gambar) VALUES ('$ISBN_ISSN', '$Judul', '$Pengarang', '$Tipe_media', '$Penerbit', '$Jenis', '$Edisi', '$Tahun_terbit', '$Subjek', '$targetFileWithoutDir')";
 
             if (mysqli_query($koneksi, $sql)) {
-                echo "<script>alert('Menu berhasil ditambah!');</script>";
+                echo "<script>alert('Buku berhasil ditambah!');</script>";
                 header("Location: ../../view/admin/buku.php");
             } else {
                 echo "Terjadi kesalahan: " . mysqli_error($koneksi);

@@ -225,13 +225,9 @@ if (isset($_GET['Email'])) {
         <?php if (isset($_GET['Email'])) { ?>
             <div class="form-group">
                 <label for="exampleInputEmail1">ID_anggota</label>
-                <input type="text" readonly class="form-control-plaintext" name="Name" id="exampleInputEmail1" value="<?= $d->ID_petugas; ?>">
+                <input type="text" readonly class="form-control-plaintext" name="ID_petugas" id="exampleInputEmail1" value="<?= $d->ID_petugas; ?>">
             </div>
         <?php } ?>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Nama</label>
-                <input type="text" class="form-control" name="Name" id="exampleInputEmail1" placeholder="Masukkan Nama petugas" value="<?= $d->Nama_petugas; ?>">
-            </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Nama</label>
                 <input type="text" class="form-control" name="Name" id="exampleInputEmail1" placeholder="Masukkan Nama petugas" value="<?= $d->Nama_petugas; ?>">
@@ -247,13 +243,13 @@ if (isset($_GET['Email'])) {
         <?php if (isset($_GET['Email'])) { ?>
             <div class="form-group">
                 <label for="exampleInputEmail1">Password</label>
-                <input type="text" readonly class="form-control-plaintext" name="Name" id="exampleInputEmail1" value="<?= $d->password; ?>">
+                <input type="text" readonly class="form-control-plaintext" id="exampleInputEmail1" value="<?= $d->password; ?>">
             </div>
         <?php } ?>
         <?php if (!isset($_GET['Email'])) { ?>
             <div class="form-group">
                 <label for="exampleInputEmail1">Password</label>
-                <input type="text" class="form-control" name="Name" id="exampleInputEmail1" placeholder="Masukkan password" value="<?= $d->password; ?>">
+                <input type="text" class="form-control" name="password" id="exampleInputEmail1" placeholder="Masukkan password" value="<?= $d->password; ?>">
             </div>
         <?php } ?>
         </div>
