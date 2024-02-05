@@ -198,7 +198,7 @@ include '../../forms/koneksi.php';
 $query = "SELECT * FROM petugas ORDER BY Nama_petugas ASC";
 $result = mysqli_query($koneksi, $query);
 ?>
-                                <div class="card-body">
+                                <div class="table-responsive">
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
