@@ -233,10 +233,6 @@ if (isset($_GET['Email'])) {
                 <input type="text" class="form-control" name="Name" id="exampleInputEmail1" placeholder="Masukkan Nama petugas" value="<?= $d->Nama_petugas; ?>">
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Nama</label>
-                <input type="text" class="form-control" name="Name" id="exampleInputEmail1" placeholder="Masukkan Nama petugas" value="<?= $d->Nama_petugas; ?>">
-            </div>
-            <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
                 <input type="email" class="form-control" name="Email" id="exampleInputEmail1" placeholder="Masukkan Email Petugas" value="<?= $d->Email; ?>">
             </div>
