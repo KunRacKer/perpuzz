@@ -212,7 +212,6 @@ $result = mysqli_query($koneksi, $query);
                                                 <th>Edisi</th>
                                                 <th>Tahun Terbit</th>
                                                 <th>Subjek</th>
-                                                <th>Jumlah</th>
                                                 <th>Gambar</th>
                                                 <th colspan="2"><center>Aksi</center> </th>
                                             </tr>
@@ -229,9 +228,8 @@ $result = mysqli_query($koneksi, $query);
                                             <td><?= $d->Edisi; ?></td>
                                             <td><?= $d->Tahun_terbit; ?></td>
                                             <td><?= $d->Subjek; ?></td>
-                                            <td><?= $d->Jumlah; ?></td>
                                             <td><?= $d->Gambar; ?></td>
-                                            <td> <button class="btn btn-primary" type="button"><a href="#" style="color: white">Ubah</a></button></td>
+                                            <td> <button class="btn btn-primary" type="button"><a href="ubahbuku.php?ISBN_ISSN=<?= $d->ISBN_ISSN; ?>" style="color: white">Ubah</a></button></td>
                                             <td> <button class="btn btn-primary" type="button"><a href="../../forms/admin/hapusbuku.php?ISBN_ISSN=<?= $d->ISBN_ISSN; ?>" style="color: white">Hapus</a></button></td>
                                         </tr>
                                             <?php } ?>
@@ -247,7 +245,6 @@ $result = mysqli_query($koneksi, $query);
                                                 <th>Edisi</th>
                                                 <th>Tahun Terbit</th>
                                                 <th>Subjek</th>
-                                                <th>Jumlah</th>
                                                 <th>Gambar</th>
                                                 <th colspan="2"><center>Aksi</center> </th>
                                             </tr>

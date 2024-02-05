@@ -8,9 +8,9 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta value="" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta value="" name="description" content="">
+    <meta value="" name="author" content="">
 
     <title>Dashboard Admin</title>
 
@@ -182,39 +182,50 @@
 
                 </nav>
                 <!-- End of Topbar -->
-
-                <h1 class="m-5 text-dark"> Tambah Buku</h1>
+<?php
+// fetching data
+include '../../forms/koneksi.php';
+$id = $_GET['ISBN_ISSN'];
+$stmt = $koneksi->prepare("SELECT * FROM buku WHERE ISBN_ISSN = ?");
+$stmt->bind_param("s", $id);
+$stmt->execute();
+$result = $stmt->get_result();
+while($d = $result->fetch_object()) {
+?>
+                <h1 class="m-5 text-dark"> Ubah Buku</h1>
                 <div class="card card-primary">
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form action="../../forms/admin/tambahbuku.php" method="POST" enctype="multipart/form-data">
+                    <form action="../../forms/admin/updatebuku.php" method="POST" enctype="multipart/form-data">
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">ISBN_ISSN</label>
-                                <input type="text"  name="ISBN_ISSN" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nomor ISBN_ISSN">
+                                <input type="text"  value="<?= $d->ISBN_ISSN; ?>" name="ISBN_ISSN" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nomor ISBN_ISSN">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Judul</label>
-                                <input type="text" name="Judul" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Judul">
+                                <input type="text" value="<?= $d->Judul; ?>" name="Judul" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Judul">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Pengarang</label>
-                                <input type="text" name="Pengarang" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Pengarang">
+                                <input type="text" value="<?= $d->Pengarang; ?>" name="Pengarang" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Pengarang">
                             </div>
                             <div class="form-group">
                                 <label for="exampleSelectRounded0">Tipe_Media</label>
                                 <select class="custom-select rounded-0" name="Tipe_media" id="exampleSelectRounded0">
+                                    <option value="<?= $d->Tipe_media; ?>" selected disable><?= $d->Tipe_media; ?></option>
                                     <option value="Text Book">Text Book</option>
                                     <option value="E Book">E Book</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Penerbit</label>
-                                <input type="text" name="Penerbit" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Penerbit">
+                                <input type="text" value="<?= $d->Penerbit; ?>" name="Penerbit" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Penerbit">
                             </div>
                             <div class="form-group">
                                 <label for="exampleSelectRounded0">Jenis</label>
                                 <select class="custom-select rounded-0" name="Jenis" id="exampleSelectRounded0">
+                                    <option value="<?= $d->Jenis; ?>" selected disable><?= $d->Jenis; ?></option>
                                     <option value="Buku">Buku</option>
                                     <option Value="Novel">Novel</option>
                                     <option Value="Majalah">Majalah</option>
@@ -222,15 +233,15 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Edisi</label>
-                                <input type="text" name="Edisi" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Edisi">
+                                <input type="text" value="<?= $d->Edisi; ?>" name="Edisi" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Edisi">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Tahun Terbit</label>
-                                <input type="text" name="Tahun_terbit" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Tahun Terbit">
+                                <input type="text" value="<?= $d->Tahun_terbit; ?>" name="Tahun_terbit" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Tahun Terbit">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Subjek</label>
-                                <input type="text" name="Subjek" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Subjek">
+                                <input type="text" value="<?= $d->Subjek; ?>" name="Subjek" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Subjek">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputFile">Upload Cover Buku</label>
@@ -250,6 +261,7 @@
                         </div>
 
                     </form>
+                    <?php } ?>
                 </div>
             </div>
             <!-- Bootstrap core JavaScript-->
