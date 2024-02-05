@@ -24,7 +24,7 @@ if (isset($_GET['ISBN_ISSN'])) {
         echo "<script>alert('Buku berhasil ditambahkan!');</script>";
         header("Location: ../view/listbuku.php");
     } else {
-      echo "Terjadi kesalahan: " . mysqli_error($koneksi);
+        echo "Terjadi kesalahan: " . mysqli_error($koneksi);
     }
 }
 

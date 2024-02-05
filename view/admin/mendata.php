@@ -218,6 +218,7 @@ $result = mysqli_query($koneksi, $query);
                                                 <th>ISBN_ISSN</th>
                                                 <th>Tgl Pinjam</th>
                                                 <th>Tgl Kembali</th>
+                                                <th>Status</th>
                                                 <th colspan="2"><center>Aksi</center> </th>                                            
                                             </tr>
                                         </thead>
@@ -228,9 +229,13 @@ $result = mysqli_query($koneksi, $query);
                                             <td><?= $d->ID_anggota; ?></td>
                                             <td><?= $d->ID_petugas; ?></td>
                                             <td><?= $d->ISBN_ISSN; ?></td>
-                                            <td><?= $d->Tgl_pinjam; ?></td>
-                                            <td><?= $d->Tgl_kembali; ?></td>
-                                            <td><button class="btn btn-primary" type="button"><a href="#" style="color: white">Ubah</a></button></td>
+                                            <td><?= date('d M Y', strtotime($d->Tgl_pinjam)); ?></td>
+                                            <td><?= date('d M Y', strtotime($d->Tgl_kembali)); ?></td>
+                                            <td><?php if(date('d M Y', strtotime($d->Tgl_kembali)) <= date('Y-m-d')){
+                                                echo "Belum Dikembalikan";
+                                            } else {
+                                                echo "Terlambat Dikembalikan";
+                                            } ?></td>
                                             <td><button class="btn btn-primary" type="button"><a href="../../forms/admin/selesaipinjam.php?No_pinjam=<?= $d->No_pinjam; ?>" style="color: white">Selesai</a></button></td>
                                         </tr>
                                         <?php } ?>
@@ -243,6 +248,7 @@ $result = mysqli_query($koneksi, $query);
                                                 <th>ISBN_ISSN</th>
                                                 <th>Tgl Pinjam</th>
                                                 <th>Tgl Kembali</th>
+                                                <th>Status</th>
                                                 <th colspan="2"><center>Aksi</center> </th>                                            
                                             </tr>
                                         </tfoot>

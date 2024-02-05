@@ -188,45 +188,96 @@
                                 </a>
                             </div>
                         </li>
-
                     </ul>
-
                 </nav>
                 <!-- End of Topbar -->
+            <h1 class="m-5 text-dark"> Tambah Petugas</h1>
 
-                <h1 class="m-5 text-dark"> Tambah Buku</h1>
-                <div class="card card-primary">
-                    <!-- /.card-header -->
-                    <!-- form start -->
-                    <form action="../../forms/admin/tambahpetugas.php" method="POST">
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Nama</label>
-                                <input type="text" class="form-control" name="Name" id="exampleInputEmail1" placeholder="Masukkan Nama petugas">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email</label>
-                                <input type="text" class="form-control" name="Email" id="exampleInputEmail1" placeholder="Masukkan Email Petugas">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">No. Telp</label>
-                                <input type="text" class="form-control" name="No_telp" id="exampleInputEmail1" placeholder="Masukkan No. Telp Petugas">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Password</label>
-                                <input type="password" class="form-control" name="password" id="exampleInputEmail1" placeholder="Masukkan No. Telp Petugas">
-                            </div>
-                        </div>
-                        <!-- /.card-body -->
+            <?php
+// fetching data
+include '../../forms/koneksi.php';
 
-                        <div class="card-footer">
-                            <button type="submit" class="btn btn-primary">Simpan</button>
-                            <button type="submit" class="btn btn-default float-right"> <a href="petugas.php">Kembali</a> </button>
-                        </div>
+$defaultData = array(
+    'ID_petugas' => '',
+    'Nama_petugas' => '',
+    'Email' => '',
+    'No_telp' => '',
+    'password' => ''
+);
 
-                    </form>
-                </div>
+if (isset($_GET['Email'])) {
+    $Email = $_GET['Email'];
+
+    $stmt = $koneksi->prepare("SELECT * FROM petugas JOIN user ON petugas.ID_petugas = user.ID_petugas WHERE petugas.Email = ?");
+    $stmt->bind_param("s", $Email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $d = $result->fetch_object();
+    } else {
+        echo "Data tidak ditemukan.";
+        $d = (object) $defaultData;
+    }
+} else {
+    $d = (object) $defaultData;
+}
+?>
+
+<div class="card card-primary">
+    <!-- /.card-header -->
+    <!-- form start -->
+<?php if (isset($_GET['Email'])) { ?>
+    <form action="../../forms/admin/updatepetugas.php" method="POST">    
+<?php } ?>
+<?php if (!isset($_GET['Email'])) { ?>
+    <form action="../../forms/admin/tambahpetugas.php" method="POST">    
+<?php } ?>
+        <div class="card-body">
+        <?php if (isset($_GET['Email'])) { ?>
+            <div class="form-group">
+                <label for="exampleInputEmail1">ID_anggota</label>
+                <input type="text" readonly class="form-control-plaintext" name="Name" id="exampleInputEmail1" value="<?= $d->ID_petugas; ?>">
             </div>
+        <?php } ?>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nama</label>
+                <input type="text" class="form-control" name="Name" id="exampleInputEmail1" placeholder="Masukkan Nama petugas" value="<?= $d->Nama_petugas; ?>">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nama</label>
+                <input type="text" class="form-control" name="Name" id="exampleInputEmail1" placeholder="Masukkan Nama petugas" value="<?= $d->Nama_petugas; ?>">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="email" class="form-control" name="Email" id="exampleInputEmail1" placeholder="Masukkan Email Petugas" value="<?= $d->Email; ?>">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">No. Telp</label>
+                <input type="text" class="form-control" name="No_telp" id="exampleInputEmail1" placeholder="Masukkan No. Telp Petugas" value="<?= $d->No_telp; ?>">
+            </div>
+        <?php if (isset($_GET['Email'])) { ?>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Password</label>
+                <input type="text" readonly class="form-control-plaintext" name="Name" id="exampleInputEmail1" value="<?= $d->password; ?>">
+            </div>
+        <?php } ?>
+        <?php if (!isset($_GET['Email'])) { ?>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Password</label>
+                <input type="text" class="form-control" name="Name" id="exampleInputEmail1" placeholder="Masukkan password" value="<?= $d->password; ?>">
+            </div>
+        <?php } ?>
+        </div>
+        <!-- /.card-body -->
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Simpan</button>
+            <a href="petugas.php" class="btn btn-default float-right">Kembali</a>
+        </div>
+    </form>
+</div>
+
             <!-- Bootstrap core JavaScript-->
             <script src="vendor/jquery/jquery.min.js"></script>
             <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

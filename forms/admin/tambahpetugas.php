@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Eksekusi prepared statement dan cek hasil
     if ($stmt1->execute() && $stmt2->execute()) {
         echo "<script>alert('Berhasil!!');</script>";
-        include("../../view/admin/petugas.php");
+        header("Location: ../../view/admin/petugas.php");
     } else {
         echo "Terjadi kesalahan: " . mysqli_error($koneksi);
     }
